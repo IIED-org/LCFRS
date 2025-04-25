@@ -1,0 +1,22 @@
+uuid: 702dd2e6-cdee-438b-b563-36b48c12db9b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - lcfrs_tw
+_core:
+  default_config_hash: G4iNGvy_k2yNIEH_FJmbkvgBBar1etJIhKJYuygT7hU
+id: lcfrs_tw_content
+theme: lcfrs_tw
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }
