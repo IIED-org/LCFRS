@@ -1,0 +1,32 @@
+uuid: 6197b88c-8b1f-428c-9b86-740de39932d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: false
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    show_message_after_update: true
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+name: Update
+type: update
+description: 'Articles, announcements, press releases etc. Can be added as full page or link to external site.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

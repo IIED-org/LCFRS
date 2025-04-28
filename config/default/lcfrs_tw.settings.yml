@@ -5,7 +5,7 @@ features:
   favicon: 1
 logo:
   use_default: 0
-  path: ''
+  path: themes/custom/lcfrs_tw/images/lcrfs-logo-sm.svg
 favicon:
   use_default: 0
   path: themes/favicon.ico

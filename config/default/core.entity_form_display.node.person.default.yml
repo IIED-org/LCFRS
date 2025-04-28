@@ -17,6 +17,7 @@ dependencies:
     - media_library
     - path
     - scheduler
+    - scheduler_content_moderation_integration
     - tagify
     - text
 _core:
@@ -113,6 +114,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  publish_state:
+    type: scheduler_moderation
+    weight: 53
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   publish_status:
     type: scheduler_moderation
     weight: -4
@@ -162,11 +169,15 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  url_redirects:
-    weight: 50
+  unpublish_state:
+    type: scheduler_moderation
+    weight: 55
+    region: content
     settings: {  }
     third_party_settings: {  }
+  url_redirects:
+    weight: 50
     region: content
-hidden:
-  publish_state: true
-  unpublish_state: true
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

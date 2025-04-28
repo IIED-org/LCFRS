@@ -1,0 +1,13 @@
+uuid: f2ec7ad7-2363-4f7d-a780-5c120bcf4835
+langcode: en
+status: true
+dependencies: {  }
+id: green_background
+label: 'Green background'
+classes: bg-fs-green-500
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions:
+  - layout_onecol
+weight: 0
