@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.person.field_description
     - field.field.node.person.field_featured_image
     - field.field.node.person.field_person__email
-    - field.field.node.person.field_person__phone_number
     - field.field.node.person.field_person__role_job_title
     - field.field.node.person.field_tags
     - node.type.person
@@ -63,14 +62,6 @@ content:
     settings:
       placeholder: ''
       size: 60
-    third_party_settings: {  }
-  field_person__phone_number:
-    type: string_textfield
-    weight: 4
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   field_person__role_job_title:
     type: text_textfield

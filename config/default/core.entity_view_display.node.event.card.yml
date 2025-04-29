@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.event.field_event__location_name
     - field.field.node.event.field_featured_image
     - field.field.node.event.field_geofield
+    - field.field.node.event.field_partners
     - field.field.node.event.field_tags
     - node.type.event
   module:
@@ -36,7 +37,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   field_event__date:
     type: smartdate_default
@@ -82,15 +83,6 @@ content:
               ignore_timezone_if_UTC: true
           augmenter_settings:
             fields__field_event__date__settings_edit_form__third_party_settings__date_augmenter__instances__augmenter_settings__active_tab: ''
-    weight: 1
-    region: content
-  field_featured_image:
-    type: entity_reference_entity_view
-    label: hidden
-    settings:
-      view_mode: 16_9_medium
-      link: false
-    third_party_settings: {  }
     weight: 0
     region: content
 hidden:
@@ -100,6 +92,8 @@ hidden:
   field_event__link: true
   field_event__location_address: true
   field_event__location_name: true
+  field_featured_image: true
   field_geofield: true
+  field_partners: true
   field_tags: true
   links: true
