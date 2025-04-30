@@ -1,8 +1,9 @@
-uuid: d1af12a8-5a4f-44e1-a7bc-1982070f9586
+uuid: d67ac6e6-3848-4ebd-b8a1-f913e9771a2c
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.full
     - field.field.node.page.field_content
     - field.field.node.page.field_description
     - field.field.node.page.field_featured_image
@@ -25,8 +26,35 @@ third_party_settings:
         layout_settings:
           label: ''
         components:
-          541922dc-a8c8-4b74-9cdd-88a1f5d053dd:
-            uuid: 541922dc-a8c8-4b74-9cdd-88a1f5d053dd
+          0d0a8312-6eb7-47c7-861e-770e52419704:
+            uuid: 0d0a8312-6eb7-47c7-861e-770e52419704
+            region: content
+            configuration:
+              id: 'extra_field_block:node:page:content_moderation_control'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          201b35ff-0cde-4ca3-90c1-9a0ee1146f79:
+            uuid: 201b35ff-0cde-4ca3-90c1-9a0ee1146f79
+            region: content
+            configuration:
+              id: 'field_block:node:page:field_featured_image'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: hero
+                  link: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          fafb536a-fff1-4187-812d-2d78d26d6658:
+            uuid: fafb536a-fff1-4187-812d-2d78d26d6658
             region: content
             configuration:
               id: 'field_block:node:page:field_content'
@@ -40,54 +68,6 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 2
             additional: {  }
-          b09072a1-7bd8-49c5-ac58-2da953562e12:
-            uuid: b09072a1-7bd8-49c5-ac58-2da953562e12
-            region: content
-            configuration:
-              id: 'extra_field_block:node:page:content_moderation_control'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-            weight: 1
-            additional: {  }
-          bfcb27c2-a42f-4e71-bf84-1841a548d5a6:
-            uuid: bfcb27c2-a42f-4e71-bf84-1841a548d5a6
-            region: content
-            configuration:
-              id: 'field_block:node:page:field_featured_image'
-              label: 'Featured image'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_reference_entity_view
-                label: hidden
-                settings:
-                  view_mode: hero
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-          6976105a-c13d-457c-a8ae-0dfd6f9a7903:
-            uuid: 6976105a-c13d-457c-a8ae-0dfd6f9a7903
-            region: content
-            configuration:
-              id: 'field_block:node:page:field_tags'
-              label: Tags
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_reference_label
-                label: inline
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: 4
-            additional: {  }
         third_party_settings: {  }
   layout_builder_restrictions:
     allowed_block_categories: {  }
@@ -98,6 +78,7 @@ third_party_settings:
       allowlisted_blocks: {  }
       restricted_categories:
         - Announcements
+        - 'Content fields'
         - Dashboard
         - Forms
         - Menus
@@ -108,10 +89,10 @@ third_party_settings:
         - core
 _core:
   default_config_hash: rVDjFcG7a9eUsRsMS1vdA6OQgJ77pZjEPmk1fIuADao
-id: node.page.default
+id: node.page.full
 targetEntityType: node
 bundle: page
-mode: default
+mode: full
 content:
   content_moderation_control:
     settings: {  }

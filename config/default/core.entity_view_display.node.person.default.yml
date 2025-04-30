@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.person.field_description
     - field.field.node.person.field_featured_image
     - field.field.node.person.field_person__email
-    - field.field.node.person.field_person__phone_number
     - field.field.node.person.field_person__role_job_title
     - field.field.node.person.field_tags
     - node.type.person
@@ -26,8 +25,8 @@ third_party_settings:
         layout_id: layout_twocol_section
         layout_settings:
           label: ''
-          column_widths: 33-67
           context_mapping: {  }
+          column_widths: 33-67
         components:
           824da267-49b6-448a-92ed-4050be30b491:
             uuid: 824da267-49b6-448a-92ed-4050be30b491
@@ -68,25 +67,6 @@ third_party_settings:
                 settings: {  }
                 third_party_settings: {  }
             weight: 0
-            additional: {  }
-          ef1343b2-5ab6-419d-8ab9-6800e806caa3:
-            uuid: ef1343b2-5ab6-419d-8ab9-6800e806caa3
-            region: second
-            configuration:
-              id: 'field_block:node:person:field_person__phone_number'
-              label: 'Phone number'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: string
-                label: hidden
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-            weight: 1
             additional: {  }
           e53407f0-9221-46a4-b83e-3fdc66b01d03:
             uuid: e53407f0-9221-46a4-b83e-3fdc66b01d03
@@ -191,13 +171,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 3
-    region: content
-  field_person__phone_number:
-    type: basic_string
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 6
     region: content
   field_person__role_job_title:
     type: basic_string

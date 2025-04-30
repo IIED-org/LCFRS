@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.event.field_event__location_name
     - field.field.node.event.field_featured_image
     - field.field.node.event.field_geofield
+    - field.field.node.event.field_partners
     - field.field.node.event.field_tags
     - node.type.event
   module:
@@ -71,5 +72,6 @@ hidden:
   field_event__location_address: true
   field_event__location_name: true
   field_geofield: true
+  field_partners: true
   field_tags: true
   links: true

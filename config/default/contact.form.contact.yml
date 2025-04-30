@@ -1,0 +1,12 @@
+uuid: 7b41db8e-5c97-4f29-b596-a37e55127b0d
+langcode: en
+status: true
+dependencies: {  }
+id: contact
+label: Contact
+recipients:
+  - Webmaster@iied.org
+reply: ''
+weight: 0
+message: ''
+redirect: ''

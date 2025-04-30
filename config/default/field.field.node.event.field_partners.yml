@@ -1,0 +1,29 @@
+uuid: c319be27-1f5d-4f6f-95f6-ed58aafa1b5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_partners
+    - node.type.event
+    - taxonomy.vocabulary.partners
+id: node.event.field_partners
+field_name: field_partners
+entity_type: node
+bundle: event
+label: Partners
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      partners: partners
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

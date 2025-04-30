@@ -24,7 +24,7 @@ third_party_settings:
     parent: ''
 _core:
   default_config_hash: PmjhGrlDZhJ2MfE7iuFgs9Drw9ZrcERFE_HJcOQL1kk
-name: Event
+name: Session
 type: event
 description: 'Content which describes something happening at a specific time.'
 help: null

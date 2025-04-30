@@ -1,0 +1,30 @@
+uuid: 7aedf0f2-72fa-45ab-9324-565e0d184c1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.update.field_content
+    - field.field.node.update.field_description
+    - node.type.update
+  module:
+    - user
+id: node.update.teaser
+targetEntityType: node
+bundle: update
+mode: teaser
+content:
+  field_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_content: true

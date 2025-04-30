@@ -12,12 +12,14 @@ dependencies:
     - field.field.node.event.field_event__location_name
     - field.field.node.event.field_featured_image
     - field.field.node.event.field_geofield
+    - field.field.node.event.field_partners
     - field.field.node.event.field_tags
     - node.type.event
   module:
     - address
     - date_augmenter
     - layout_builder
+    - layout_builder_restrictions
     - layout_discovery
     - leaflet
     - link
@@ -232,6 +234,7 @@ third_party_settings:
                   geocoder:
                     control: false
                     settings:
+                      popup: false
                       autocomplete:
                         placeholder: 'Search Address'
                         title: 'Search an Address on the Map'
@@ -244,7 +247,6 @@ third_party_settings:
                       min_terms: 4
                       delay: 800
                       zoom: 16
-                      popup: false
                       options: ''
                   map_lazy_load:
                     lazy_load: true
@@ -319,7 +321,30 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 9
             additional: {  }
+          465d3626-44e5-414b-a94f-38d92b46a005:
+            uuid: 465d3626-44e5-414b-a94f-38d92b46a005
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_partners'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 10
+            additional: {  }
         third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
 _core:
   default_config_hash: 2MYlJWbFeuVeYdGDZKTHzUPefPboqHP_UL83htoIJKg
 id: node.event.default
@@ -508,6 +533,7 @@ content:
       geocoder:
         control: false
         settings:
+          popup: false
           autocomplete:
             placeholder: 'Search Address'
             title: 'Search an Address on the Map'
@@ -520,12 +546,19 @@ content:
           min_terms: 4
           delay: 800
           zoom: 16
-          popup: false
           options: ''
       map_lazy_load:
         lazy_load: true
     third_party_settings: {  }
     weight: 5
+    region: content
+  field_partners:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
     region: content
   field_tags:
     type: entity_reference_label
