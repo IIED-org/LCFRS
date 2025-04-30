@@ -1,0 +1,33 @@
+uuid: bf920bb3-3792-4d25-90a6-2dc82a6df604
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.resource.field_description
+    - field.field.node.resource.field_featured_image
+    - field.field.node.resource.rabbit_hole__settings
+    - node.type.resource
+  module:
+    - user
+id: node.resource.default
+targetEntityType: node
+bundle: resource
+mode: default
+content:
+  field_featured_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: hero
+      link: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_description: true
+  rabbit_hole__settings: true

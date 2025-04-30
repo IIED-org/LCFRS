@@ -1,0 +1,39 @@
+uuid: 52820bf7-00b1-4a78-b67f-d9b5069a0ea4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.speakers.field_photo
+    - field.field.taxonomy_term.speakers.field_role_or_job_title
+    - taxonomy.vocabulary.speakers
+  module:
+    - text
+id: taxonomy_term.speakers.default
+targetEntityType: taxonomy_term
+bundle: speakers
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_photo:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: 1_1_square_small
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_role_or_job_title:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }

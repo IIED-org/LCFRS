@@ -1,17 +1,15 @@
-uuid: 617f4d2f-23a4-49e5-949c-4ae43271966e
+uuid: 59e420d9-ebfc-441c-93f8-3d62b573630b
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_featured_image
     - media.type.image
-    - node.type.person
-_core:
-  default_config_hash: eRfocSU7SDcAkzfHFE1P7GJHwXmyz1Bmhg-iGvHsKOc
-id: node.person.field_featured_image
+    - node.type.resource
+id: node.resource.field_featured_image
 field_name: field_featured_image
 entity_type: node
-bundle: person
+bundle: resource
 label: 'Featured image'
 description: 'Include an image. This appears as the image in search engine results.'
 required: false

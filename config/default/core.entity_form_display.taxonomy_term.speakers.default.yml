@@ -1,19 +1,18 @@
-uuid: d4215c7d-1d04-4c73-b9ae-0999dfcbdcf5
+uuid: a1affcd4-bd2e-4cd1-9aae-a2426c766206
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.partners.field_logo
-    - field.field.taxonomy_term.partners.field_website
-    - taxonomy.vocabulary.partners
+    - field.field.taxonomy_term.speakers.field_photo
+    - field.field.taxonomy_term.speakers.field_role_or_job_title
+    - taxonomy.vocabulary.speakers
   module:
-    - link
     - media_library
     - path
     - text
-id: taxonomy_term.partners.default
+id: taxonomy_term.speakers.default
 targetEntityType: taxonomy_term
-bundle: partners
+bundle: speakers
 mode: default
 content:
   description:
@@ -24,20 +23,20 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_logo:
+  field_photo:
     type: media_library_widget
     weight: 102
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-  field_website:
-    type: link_default
-    weight: 101
+  field_role_or_job_title:
+    type: string_textarea
+    weight: 103
     region: content
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
+      rows: 5
+      placeholder: ''
     third_party_settings: {  }
   name:
     type: string_textfield

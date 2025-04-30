@@ -1,0 +1,13 @@
+uuid: eca254f0-9d41-4475-ae42-3295d1e49bb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.partners
+id: taxonomy_term.partners
+targetEntityType: taxonomy_term
+bundle: partners
+action: page_not_found
+no_bypass: false
+bypass_message: false
+configuration: {  }

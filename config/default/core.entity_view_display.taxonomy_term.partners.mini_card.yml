@@ -1,0 +1,32 @@
+uuid: dc95f024-729a-40ec-8e81-b3bb9c1462e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.mini_card
+    - field.field.taxonomy_term.partners.field_logo
+    - field.field.taxonomy_term.partners.field_website
+    - taxonomy.vocabulary.partners
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: taxonomy_term.partners.mini_card
+targetEntityType: taxonomy_term
+bundle: partners
+mode: mini_card
+content:
+  field_logo:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  description: true
+  field_website: true

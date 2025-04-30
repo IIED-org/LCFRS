@@ -1,0 +1,11 @@
+uuid: 5bba06bf-0422-40bf-bf98-71fb45db44c3
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.card
+label: Card
+description: 'Large card'
+targetEntityType: taxonomy_term
+cache: true

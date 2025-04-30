@@ -5,7 +5,6 @@ dependencies:
   config:
     - node.type.event
     - node.type.page
-    - node.type.person
   module:
     - content_moderation
 _core:
@@ -57,5 +56,4 @@ type_settings:
     node:
       - event
       - page
-      - person
   default_moderation_state: draft

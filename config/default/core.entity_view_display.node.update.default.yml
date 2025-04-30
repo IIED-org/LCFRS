@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.update.field_content
     - field.field.node.update.field_description
+    - field.field.node.update.rabbit_hole__settings
     - node.type.update
   module:
     - text
@@ -28,3 +29,4 @@ content:
     region: content
 hidden:
   field_description: true
+  rabbit_hole__settings: true

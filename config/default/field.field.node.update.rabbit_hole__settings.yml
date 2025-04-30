@@ -1,0 +1,21 @@
+uuid: 735eda69-c0da-4b4a-94e7-cbbd2e090d07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.rabbit_hole__settings
+    - node.type.update
+  module:
+    - rabbit_hole
+id: node.update.rabbit_hole__settings
+field_name: rabbit_hole__settings
+entity_type: node
+bundle: update
+label: 'Rabbit Hole settings'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: rabbit_hole

@@ -1,20 +1,20 @@
-uuid: 870e46a0-27d7-4436-9f50-2625b882f708
+uuid: c0883744-b148-4def-ab0b-c3707be397b8
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.update.field_content
-    - field.field.node.update.field_description
-    - field.field.node.update.rabbit_hole__settings
-    - node.type.update
+    - field.field.node.resource.field_description
+    - field.field.node.resource.field_featured_image
+    - field.field.node.resource.rabbit_hole__settings
+    - node.type.resource
   module:
     - content_moderation
+    - media_library
     - path
     - rabbit_hole
-    - text
-id: node.update.default
+id: node.resource.default
 targetEntityType: node
-bundle: update
+bundle: resource
 mode: default
 content:
   created:
@@ -23,14 +23,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_content:
-    type: text_textarea
-    weight: 13
-    region: content
-    settings:
-      rows: 9
-      placeholder: ''
-    third_party_settings: {  }
   field_description:
     type: string_textarea
     weight: 12
@@ -38,6 +30,13 @@ content:
     settings:
       rows: 5
       placeholder: ''
+    third_party_settings: {  }
+  field_featured_image:
+    type: media_library_widget
+    weight: 3
+    region: content
+    settings:
+      media_types: {  }
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default

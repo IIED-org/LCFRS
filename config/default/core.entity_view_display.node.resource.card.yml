@@ -1,18 +1,18 @@
-uuid: 4dfc2bd8-e813-4ebb-96f4-624eb42986b8
+uuid: 5223f305-8d1b-46db-8aac-78dfab0038c7
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.card
-    - field.field.node.update.field_content
-    - field.field.node.update.field_description
-    - field.field.node.update.rabbit_hole__settings
-    - node.type.update
+    - field.field.node.resource.field_description
+    - field.field.node.resource.field_featured_image
+    - field.field.node.resource.rabbit_hole__settings
+    - node.type.resource
   module:
     - user
-id: node.update.card
+id: node.resource.card
 targetEntityType: node
-bundle: update
+bundle: resource
 mode: card
 content:
   field_description:
@@ -20,7 +20,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 1
     region: content
   links:
     settings: {  }
@@ -28,5 +28,5 @@ content:
     weight: 100
     region: content
 hidden:
-  field_content: true
+  field_featured_image: true
   rabbit_hole__settings: true

@@ -1,0 +1,13 @@
+uuid: bb422ebc-afec-49a7-98f2-17f70ea847fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.page
+id: node.page
+targetEntityType: node
+bundle: page
+action: display_page
+no_bypass: false
+bypass_message: false
+configuration: {  }

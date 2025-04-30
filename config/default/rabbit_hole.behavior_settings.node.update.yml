@@ -1,0 +1,13 @@
+uuid: 441c5e20-eb15-46f3-b74c-e10ad173872d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.update
+id: node.update
+targetEntityType: node
+bundle: update
+action: display_page
+no_bypass: false
+bypass_message: false
+configuration: {  }

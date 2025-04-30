@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.update.field_content
     - field.field.node.update.field_description
+    - field.field.node.update.rabbit_hole__settings
     - node.type.update
   module:
     - user
@@ -28,3 +29,4 @@ content:
     region: content
 hidden:
   field_content: true
+  rabbit_hole__settings: true
