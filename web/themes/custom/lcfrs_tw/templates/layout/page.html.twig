@@ -53,67 +53,82 @@
       aria-label="Main navigation"
       class="bg-white md:sticky transition-all z-20 duration-200 top-0">
 
-      <div class="container flex items-end mx-auto gap-8 justify-between py-4 px-4">
+      <div class="container flex items-end justify-between mx-auto gap-8 py-4 px-4 z-20 w-full">
 
+        {# Logos #}
         <div class="flex items-end gap-8">
           <div class="shrink-0">{{ page.header }}</div> 
-          <div class="max-sm:hidden inline-block w-20 h-auto shrink-0">
+          <div class="max-sm:hidden w-20 h-auto shrink-0">
             <img src="/themes/custom/lcfrs_tw/images/lcaw-logo.svg" alt="LCAW Logo">
           </div>
         </div>
 
-        <div class="flex items-center max-lg:hidden">
-        {{ page.primary_menu }}
-        <a href="/register" class="button button-secondary text-lg mb-0.5 font-semibold">
+        {# Menu and register button #}
+        <div class="flex items-center">
+          <div class="flex max-lg:hidden">{{ page.primary_menu }}</div>
+          <a href="/register" class="button-top text-lg mb-px font-semibold max-sm:hidden mx-6 lg:mr-0 lg:ml-4 xl:ml-6">
           Register</a>
-        </div>
 
-        <div id="buttons" class="flex items-center">
-          <button class="relative z-50 inline-flex items-center justify-center w-12 h-12 lg:hidden ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 transition-transform duration-300" aria-label="Toggle menu" @click="open = !open">
-            <template x-if="!open">
-              <!-- Menu Icon -->
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 transform transition-transform duration-300" :class="{ 'rotate-0': !open, '-rotate-180': open }">
-                <line x1="4" x2="20" y1="12" y2="12"></line>
-                <line x1="4" x2="20" y1="6" y2="6"></line>
-                <line x1="4" x2="20" y1="18" y2="18"></line>
-              </svg>
-            </template>
-            <template x-if="open">
-              <!-- Close (X) Icon -->
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 transform transition-transform duration-300" :class="{ 'rotate-0': open, '-rotate-180': !open }">
-                <path d="M18 6 6 18"></path>
-                <path d="m6 6 12 12"></path>
-              </svg>
-            </template>
-          </button>
-        </div>
-
-      </div>
-      
-      <div 
-        x-show="open"
-        x-cloak
-        x-transition:enter="transition ease-out duration-300 transform"
-        x-transition:enter-start="opacity-0 translate-x-full"
-        x-transition:enter-end="opacity-100 translate-x-0"
-        x-transition:leave="transition ease-in duration-300 transform"
-        x-transition:leave-start="opacity-100 translate-x-0"
-        x-transition:leave-end="opacity-0 translate-x-full"
-        @click.stop
-        class="fixed left-0 top-[100px] bottom-0 z-40 w-full bg-fs-cyan-100 h-screen overflow-y-auto transition-transform duration-300 ease-in-out transform"
-        id="menu"
-        :aria-hidden="open ? 'false' : 'true'"> 
-
-        <nav class="flex flex-col gap-4 off-canvas-menu container mx-auto px-4">
-          {{ drupal_menu('main') }} 
-          <div class="flex flex-col gap-4">
-          <a href="/register" class="button button-secondary text-lg mb-0.5 font-semibold block">
-          Register</a>
+          {# Mobile menu button #}
+          <div id="buttons" class="flex items-center">
+            <button class="relative z-50 inline-flex items-center justify-center w-12 h-12 lg:hidden ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 ring-fs-cyan-500 disabled:pointer-events-none disabled:opacity-50 transition-transform duration-300" aria-label="Toggle menu" @click="open = !open">
+              <template x-if="!open">
+                <!-- Menu Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 transform transition-transform duration-300" :class="{ 'rotate-0': !open, '-rotate-180': open }">
+                  <line x1="4" x2="20" y1="12" y2="12"></line>
+                  <line x1="4" x2="20" y1="6" y2="6"></line>
+                  <line x1="4" x2="20" y1="18" y2="18"></line>
+                </svg>
+              </template>
+              <template x-if="open">
+                <!-- Close (X) Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 transform transition-transform duration-300" :class="{ 'rotate-0': open, '-rotate-180': !open }">
+                  <path d="M18 6 6 18"></path>
+                  <path d="m6 6 12 12"></path>
+                </svg>
+              </template>
+            </button>
           </div>
-        </nav>
 
-      </div>
+        </div>
+      
+      
+        <div 
+          x-show="open"
+          x-cloak
+          x-transition:enter="transition ease-out duration-300 transform"
+          x-transition:enter-start="opacity-0 translate-x-full"
+          x-transition:enter-end="opacity-100 translate-x-0"
+          x-transition:leave="transition ease-in duration-300 transform"
+          x-transition:leave-start="opacity-100 translate-x-0"
+          x-transition:leave-end="opacity-0 translate-x-full"
+          @click.stop
+          class="fixed left-0 top-[95px] bottom-0 z-40 w-full bg-fs-cyan-100 h-screen overflow-y-auto transition-transform duration-300 ease-in-out transform"
+          id="menu"
+          :aria-hidden="open ? 'false' : 'true'"> 
 
+          <nav class="flex flex-col gap-4 off-canvas-menu container mx-auto px-4">
+            {{ drupal_menu('main') }} 
+            <div class="flex flex-col gap-4">
+            <a href="/register" class="button-top text-lg mb-0.5 font-semibold mx-4">
+            Register</a>
+            </div>
+          </nav>
+
+        </div>
+
+        {# Overlay #}
+        <div 
+          x-show="open" 
+          x-cloak
+          @click="open = false"
+          class="fixed inset-0 z-10 cursor-pointer w-full h-full cursor-pointer" 
+          aria-label="Close menu overlay">
+        </div>
+      
+      
+
+     </div>
     </header>
 
 
@@ -156,3 +171,4 @@
 
 
 </div>{# /.layout-container #}
+
