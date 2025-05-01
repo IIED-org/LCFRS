@@ -1,0 +1,10 @@
+uuid: 27006938-ea71-44ac-9c75-3c443c240da4
+langcode: en
+status: true
+dependencies: {  }
+id: spacing
+label: Spacing
+multiselect: multiple
+form_type: checkboxes
+required: false
+weight: 0

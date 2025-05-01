@@ -1,0 +1,13 @@
+uuid: 8bd8264c-dd85-4c9f-89ee-30213d9072c1
+langcode: en
+status: true
+dependencies: {  }
+id: light_green_background
+label: 'Light green background'
+classes: bg-fs-green-100
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions:
+  - layout_onecol
+weight: 0

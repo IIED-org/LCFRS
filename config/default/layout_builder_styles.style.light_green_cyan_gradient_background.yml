@@ -1,0 +1,13 @@
+uuid: f8851fbb-d733-4a57-9fbd-0c48b9a57160
+langcode: en
+status: true
+dependencies: {  }
+id: light_green_cyan_gradient_background
+label: 'Light green-cyan gradient background'
+classes: bg-fs-cyan-green-100
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions:
+  - layout_onecol
+weight: 0

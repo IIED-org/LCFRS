@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.speakers.field_organisation
     - field.field.taxonomy_term.speakers.field_photo
     - field.field.taxonomy_term.speakers.field_role_or_job_title
     - taxonomy.vocabulary.speakers
@@ -18,6 +19,14 @@ content:
   description:
     type: text_textfield
     weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_organisation:
+    type: string_textfield
+    weight: 104
     region: content
     settings:
       size: 60

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.card
+    - field.field.taxonomy_term.speakers.field_organisation
     - field.field.taxonomy_term.speakers.field_photo
     - field.field.taxonomy_term.speakers.field_role_or_job_title
     - taxonomy.vocabulary.speakers
@@ -23,6 +24,14 @@ content:
     type: text_default
     label: hidden
     settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_organisation:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
     weight: 2
     region: content

@@ -1,0 +1,13 @@
+uuid: 64b09e45-652c-4bdf-a644-c7fdc4b79bc1
+langcode: en
+status: true
+dependencies: {  }
+id: padding_y
+label: 'Padding Y'
+classes: py-12
+type: section
+group: spacing
+block_restrictions: {  }
+layout_restrictions:
+  - layout_onecol
+weight: 0

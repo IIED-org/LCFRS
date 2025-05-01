@@ -1,0 +1,13 @@
+uuid: aa00eb9a-bd76-47d2-b268-f7ba66cb4c92
+langcode: en
+status: true
+dependencies: {  }
+id: mid_green_cyan_gradient_background
+label: 'Mid green-cyan gradient background'
+classes: bg-fs-cyan-green-200
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions:
+  - layout_onecol
+weight: 0

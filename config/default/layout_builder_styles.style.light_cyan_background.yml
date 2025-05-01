@@ -1,0 +1,13 @@
+uuid: 68b58ba4-dda0-4af6-928b-5bed65986351
+langcode: en
+status: true
+dependencies: {  }
+id: light_cyan_background
+label: 'Light cyan background'
+classes: bg-fs-cyan-100
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions:
+  - layout_onecol
+weight: 0
