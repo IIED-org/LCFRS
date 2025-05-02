@@ -10,7 +10,6 @@ dependencies:
     - field.field.node.event.field_event__file
     - field.field.node.event.field_event__link
     - field.field.node.event.field_featured_image
-    - field.field.node.event.field_geofield
     - field.field.node.event.field_partners
     - field.field.node.event.field_room
     - field.field.node.event.field_speakers
@@ -69,7 +68,6 @@ hidden:
   field_content: true
   field_event__file: true
   field_event__link: true
-  field_geofield: true
   field_partners: true
   field_room: true
   field_speakers: true
