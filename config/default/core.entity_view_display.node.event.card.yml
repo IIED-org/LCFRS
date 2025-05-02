@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.event.field_geofield
     - field.field.node.event.field_partners
     - field.field.node.event.field_room
+    - field.field.node.event.field_speakers
     - field.field.node.event.field_tags
     - node.type.event
   module:
@@ -93,5 +94,6 @@ hidden:
   field_geofield: true
   field_partners: true
   field_room: true
+  field_speakers: true
   field_tags: true
   links: true

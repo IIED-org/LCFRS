@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.event.field_geofield
     - field.field.node.event.field_partners
     - field.field.node.event.field_room
+    - field.field.node.event.field_speakers
     - field.field.node.event.field_tags
     - node.type.event
   module:
@@ -320,6 +321,22 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 11
             additional: {  }
+          5643ac2f-bf7c-4181-817a-7b1b5e56ff46:
+            uuid: 5643ac2f-bf7c-4181-817a-7b1b5e56ff46
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_speakers'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 12
+            additional: {  }
         third_party_settings: {  }
   layout_builder_restrictions:
     allowed_block_categories: {  }
@@ -535,6 +552,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 11
+    region: content
+  field_speakers:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
     region: content
   field_tags:
     type: entity_reference_label
