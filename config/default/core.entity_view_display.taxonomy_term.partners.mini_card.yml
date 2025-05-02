@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.mini_card
     - field.field.taxonomy_term.partners.field_logo
+    - field.field.taxonomy_term.partners.field_partner_type
     - field.field.taxonomy_term.partners.field_website
     - taxonomy.vocabulary.partners
   module:
@@ -29,4 +30,5 @@ content:
     region: content
 hidden:
   description: true
+  field_partner_type: true
   field_website: true

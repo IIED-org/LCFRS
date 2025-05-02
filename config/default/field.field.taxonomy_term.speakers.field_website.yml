@@ -1,0 +1,23 @@
+uuid: 484ffb7b-8072-4a2b-9c90-108e54b2e5dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_website
+    - taxonomy.vocabulary.speakers
+  module:
+    - link
+id: taxonomy_term.speakers.field_website
+field_name: field_website
+entity_type: taxonomy_term
+bundle: speakers
+label: Website
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 16
+field_type: link

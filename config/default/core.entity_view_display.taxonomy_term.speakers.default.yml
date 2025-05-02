@@ -6,8 +6,10 @@ dependencies:
     - field.field.taxonomy_term.speakers.field_organisation
     - field.field.taxonomy_term.speakers.field_photo
     - field.field.taxonomy_term.speakers.field_role_or_job_title
+    - field.field.taxonomy_term.speakers.field_website
     - taxonomy.vocabulary.speakers
   module:
+    - link
     - text
 id: taxonomy_term.speakers.default
 targetEntityType: taxonomy_term
@@ -44,5 +46,17 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_website:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
     region: content
 hidden: {  }

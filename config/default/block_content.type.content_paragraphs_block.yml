@@ -1,0 +1,8 @@
+uuid: f7444726-e982-466d-b52a-2f91b38a8637
+langcode: en
+status: true
+dependencies: {  }
+id: content_paragraphs_block
+label: 'Content paragraphs block'
+revision: false
+description: null

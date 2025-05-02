@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.partners.field_logo
+    - field.field.taxonomy_term.partners.field_partner_type
     - field.field.taxonomy_term.partners.field_website
     - taxonomy.vocabulary.partners
   module:
@@ -42,4 +43,5 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
-hidden: {  }
+hidden:
+  field_partner_type: true

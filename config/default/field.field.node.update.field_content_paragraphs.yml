@@ -1,0 +1,44 @@
+uuid: 7ec63416-cb56-402a-b22f-9c3d22c73028
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_paragraphs
+    - node.type.update
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.video
+  module:
+    - entity_reference_revisions
+id: node.update.field_content_paragraphs
+field_name: field_content_paragraphs
+entity_type: node
+bundle: update
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      text: text
+      image: image
+      video: video
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: -9
+        enabled: false
+      image:
+        weight: -7
+        enabled: true
+      text:
+        weight: -8
+        enabled: true
+      video:
+        weight: -6
+        enabled: true
+field_type: entity_reference_revisions

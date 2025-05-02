@@ -7,6 +7,7 @@ dependencies:
     - field.field.taxonomy_term.speakers.field_organisation
     - field.field.taxonomy_term.speakers.field_photo
     - field.field.taxonomy_term.speakers.field_role_or_job_title
+    - field.field.taxonomy_term.speakers.field_website
     - taxonomy.vocabulary.speakers
   module:
     - layout_builder
@@ -45,3 +46,4 @@ content:
     region: content
 hidden:
   description: true
+  field_website: true

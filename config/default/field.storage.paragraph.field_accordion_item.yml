@@ -1,14 +1,12 @@
-uuid: 56f657ed-f6ab-4c58-9647-534e767f3b0c
+uuid: 4151f872-7888-453e-aa81-7d7dacc5a643
 langcode: en
 status: true
 dependencies:
   module:
-    - node
-_core:
-  default_config_hash: Tt59QExLf1PE0EH4ULuekTGYMh1FKiAKL7QN4O85-Js
-id: node.field_event__location_name
-field_name: field_event__location_name
-entity_type: node
+    - paragraphs
+id: paragraph.field_accordion_item
+field_name: field_accordion_item
+entity_type: paragraph
 type: string
 settings:
   max_length: 255

@@ -1,0 +1,13 @@
+uuid: 2b315be4-10f1-4b48-9ebc-831ef7fe23c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.partner_type
+id: taxonomy_term.partner_type
+targetEntityType: taxonomy_term
+bundle: partner_type
+action: page_not_found
+no_bypass: false
+bypass_message: false
+configuration: {  }

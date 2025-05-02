@@ -4,8 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.card
-    - field.field.node.update.field_content
+    - field.field.node.update.field_content_paragraphs
     - field.field.node.update.field_description
+    - field.field.node.update.field_update_type
     - field.field.node.update.rabbit_hole__settings
     - node.type.update
   module:
@@ -28,5 +29,6 @@ content:
     weight: 100
     region: content
 hidden:
-  field_content: true
+  field_content_paragraphs: true
+  field_update_type: true
   rabbit_hole__settings: true

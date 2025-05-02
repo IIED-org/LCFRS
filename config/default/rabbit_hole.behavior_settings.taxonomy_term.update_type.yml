@@ -1,0 +1,13 @@
+uuid: 5a0dfc77-ccb6-4be2-80ae-1009da2c8a90
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.update_type
+id: taxonomy_term.update_type
+targetEntityType: taxonomy_term
+bundle: update_type
+action: page_not_found
+no_bypass: false
+bypass_message: false
+configuration: {  }
