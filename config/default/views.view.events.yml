@@ -14,9 +14,9 @@ dependencies:
 _core:
   default_config_hash: TRC6sks8KGoP68yNPh2be314QbViaIB2JCRNQjvHwXE
 id: events
-label: Events
+label: Sessions
 module: views
-description: ''
+description: 'Shows lists of sessions'
 tag: ''
 base_table: node_field_data
 base_field: nid
@@ -27,7 +27,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Events
+      title: Sessions
       fields:
         title:
           id: title
@@ -155,52 +155,6 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
-        field_event__date_end_value:
-          id: field_event__date_end_value
-          table: node__field_event__date
-          field: field_event__date_end_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: date
-          operator: '>'
-          value:
-            min: ''
-            max: ''
-            value: now
-            type: offset
-            granularity: second
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            min_placeholder: ''
-            max_placeholder: ''
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
         status:
           id: status
           table: node_field_data
@@ -286,165 +240,30 @@ display:
       tags: {  }
   all:
     id: all
-    display_title: Events
+    display_title: Sessions
     display_plugin: block
     position: 1
     display_options:
-      display_description: ''
-      display_extenders: {  }
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url.query_args
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  past:
-    id: past
-    display_title: 'Past events'
-    display_plugin: block
-    position: 1
-    display_options:
-      title: 'Past events'
-      sorts:
-        field_event__date_value:
-          id: field_event__date_value
-          table: node__field_event__date
-          field: field_event__date_value
-          relationship: none
-          group_type: max
-          admin_label: ''
-          plugin_id: date
-          order: DESC
-          expose:
-            label: ''
-            field_identifier: field_event__date_value
-          exposed: false
-          granularity: second
-      filters:
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          value:
-            event: event
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-        field_event__date_end_value:
-          id: field_event__date_end_value
-          table: node__field_event__date
-          field: field_event__date_end_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: date
-          operator: '<='
-          value:
-            min: ''
-            max: ''
-            value: now
-            type: offset
-            granularity: second
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            min_placeholder: ''
-            max_placeholder: ''
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-        status:
-          id: status
-          table: node_field_data
-          field: status
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: status
-          plugin_id: boolean
-          operator: '='
-          value: '1'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
+      pager:
+        type: none
+        options:
+          offset: 0
       defaults:
-        title: false
-        sorts: false
-        filters: false
-        filter_groups: false
+        pager: false
       display_description: ''
       display_extenders: {  }
+      block_description: 'Sessions page block'
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
   upcoming:
     id: upcoming
-    display_title: 'Upcoming events'
+    display_title: 'Featured sessions'
     display_plugin: block
     position: 2
     display_options:
@@ -565,7 +384,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 3
+          items_per_page: 4
       empty: {  }
       defaults:
         empty: false
@@ -603,6 +422,7 @@ display:
             format: content_format
           tokenize: false
       display_extenders: {  }
+      block_description: 'Featured sessions block'
       block_hide_empty: true
     cache_metadata:
       max-age: -1

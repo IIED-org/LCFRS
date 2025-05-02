@@ -1,0 +1,51 @@
+uuid: a0670f01-01e8-488e-a884-c5cb22c24b0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.content_paragraphs_block
+    - field.storage.block_content.field_content
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.embed
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.video
+  module:
+    - entity_reference_revisions
+id: block_content.content_paragraphs_block.field_content
+field_name: field_content
+entity_type: block_content
+bundle: content_paragraphs_block
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      accordion: accordion
+      embed: embed
+      image: image
+      text: text
+      video: video
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 6
+        enabled: true
+      embed:
+        weight: 7
+        enabled: true
+      image:
+        weight: 8
+        enabled: true
+      text:
+        weight: 9
+        enabled: true
+      video:
+        weight: 10
+        enabled: true
+field_type: entity_reference_revisions

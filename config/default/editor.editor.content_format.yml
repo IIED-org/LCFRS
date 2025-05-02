@@ -15,27 +15,15 @@ settings:
     items:
       - heading
       - bold
-      - italic
       - blockQuote
       - link
       - bulletedList
       - numberedList
-      - indent
-      - outdent
-      - alignment
-      - insertTable
-      - drupalMedia
       - undo
       - redo
       - removeFormat
       - sourceEditing
   plugins:
-    ckeditor5_alignment:
-      enabled_alignments:
-        - center
-        - justify
-        - left
-        - right
     ckeditor5_heading:
       enabled_headings:
         - heading2

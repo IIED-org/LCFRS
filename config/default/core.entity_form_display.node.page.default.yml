@@ -5,12 +5,12 @@ dependencies:
   config:
     - field.field.node.page.field_content
     - field.field.node.page.field_description
-    - field.field.node.page.field_featured_image
     - field.field.node.page.field_tags
     - field.field.node.page.layout_builder__layout
     - node.type.page
+    - workflows.workflow.basic_editorial
   module:
-    - media_library
+    - content_moderation
     - path
     - scheduler
     - tagify
@@ -44,13 +44,6 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  field_featured_image:
-    type: media_library_widget
-    weight: 3
-    region: content
-    settings:
-      media_types: {  }
-    third_party_settings: {  }
   field_tags:
     type: tagify_entity_reference_autocomplete_widget
     weight: 9
@@ -59,6 +52,10 @@ content:
       match_operator: CONTAINS
       match_limit: 10
       placeholder: ''
+      suggestions_dropdown: 1
+      show_entity_id: 0
+      show_info_label: 0
+      info_label: ''
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
@@ -98,7 +95,7 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 16
+    weight: 15
     region: content
     settings:
       display_label: true
@@ -131,6 +128,11 @@ content:
   unpublish_on:
     type: datetime_timestamp_no_default
     weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }

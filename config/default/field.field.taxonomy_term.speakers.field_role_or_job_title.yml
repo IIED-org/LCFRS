@@ -1,0 +1,19 @@
+uuid: 5b78e293-97f3-4e3a-8009-d80bb0330cd1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_role_or_job_title
+    - taxonomy.vocabulary.speakers
+id: taxonomy_term.speakers.field_role_or_job_title
+field_name: field_role_or_job_title
+entity_type: taxonomy_term
+bundle: speakers
+label: 'Role or job title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

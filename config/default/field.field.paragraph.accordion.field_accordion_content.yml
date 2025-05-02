@@ -1,0 +1,29 @@
+uuid: 94083146-ea2a-44d8-8337-4798163582b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_accordion_content
+    - filter.format.content_format
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.accordion
+  module:
+    - text
+id: paragraph.accordion.field_accordion_content
+field_name: field_accordion_content
+entity_type: paragraph
+bundle: accordion
+label: 'Accordion content'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '<p>Accordion content</p>'
+    format: content_format
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - content_format
+    - full_html
+field_type: text_long

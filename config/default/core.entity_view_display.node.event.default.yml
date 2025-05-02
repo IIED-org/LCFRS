@@ -8,20 +8,17 @@ dependencies:
     - field.field.node.event.field_event__date
     - field.field.node.event.field_event__file
     - field.field.node.event.field_event__link
-    - field.field.node.event.field_event__location_address
-    - field.field.node.event.field_event__location_name
     - field.field.node.event.field_featured_image
-    - field.field.node.event.field_geofield
     - field.field.node.event.field_partners
+    - field.field.node.event.field_room
+    - field.field.node.event.field_speakers
     - field.field.node.event.field_tags
     - node.type.event
   module:
-    - address
     - date_augmenter
     - layout_builder
     - layout_builder_restrictions
     - layout_discovery
-    - leaflet
     - link
     - smart_date
     - text
@@ -117,142 +114,6 @@ third_party_settings:
                         fields__field_event__date__settings_edit_form__third_party_settings__date_augmenter__instances__augmenter_settings__active_tab: ''
             weight: 2
             additional: {  }
-          b7c7acc3-674f-4137-94ff-200371a54d3c:
-            uuid: b7c7acc3-674f-4137-94ff-200371a54d3c
-            region: content
-            configuration:
-              id: 'field_block:node:event:field_event__location_name'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: string
-                label: hidden
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-            weight: 3
-            additional: {  }
-          9158e8c8-7578-48c1-a8f2-659d8e80706e:
-            uuid: 9158e8c8-7578-48c1-a8f2-659d8e80706e
-            region: content
-            configuration:
-              id: 'field_block:node:event:field_event__location_address'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: address_default
-                label: hidden
-                settings: {  }
-                third_party_settings: {  }
-            weight: 4
-            additional: {  }
-          0561765a-b1af-4ce8-a01e-cd1f75d3e4aa:
-            uuid: 0561765a-b1af-4ce8-a01e-cd1f75d3e4aa
-            region: content
-            configuration:
-              id: 'field_block:node:event:field_geofield'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: leaflet_formatter_default
-                label: hidden
-                settings:
-                  multiple_map: false
-                  leaflet_map: 'OSM Mapnik'
-                  height: 280
-                  height_unit: px
-                  hide_empty_map: true
-                  disable_wheel: false
-                  gesture_handling: false
-                  fitbounds_options: '{"padding":[0,0]}'
-                  reset_map:
-                    control: false
-                    options: '{"position":"topleft","title":"Reset View"}'
-                  map_scale:
-                    control: false
-                    options: '{"position":"bottomright","maxWidth":100,"metric":true,"imperial":false,"updateWhenIdle":false}'
-                  locate:
-                    control: false
-                    options: '{"position":"topright","setView":"untilPanOrZoom","returnToPrevBounds":true,"keepCurrentZoomLevel":true,"strings":{"title":"Locate my position"}}'
-                    automatic: false
-                  leaflet_tooltip:
-                    value: ''
-                    options: '{"permanent":false,"direction":"center"}'
-                  popup: false
-                  popup_content: ''
-                  leaflet_popup:
-                    control: '0'
-                    content: ''
-                    options: '{"maxWidth":"300","minWidth":"50","autoPan":true}'
-                  map_position:
-                    force: false
-                    center:
-                      lat: 0.0
-                      lon: 0.0
-                    zoomControlPosition: topleft
-                    zoom: 12
-                    minZoom: 1
-                    maxZoom: 20
-                    zoomFiner: 0
-                  icon:
-                    iconType: marker
-                    iconUrl: ''
-                    shadowUrl: ''
-                    className: ''
-                    iconSize:
-                      x: ''
-                      'y': ''
-                    iconAnchor:
-                      x: ''
-                      'y': ''
-                    shadowSize:
-                      x: ''
-                      'y': ''
-                    shadowAnchor:
-                      x: ''
-                      'y': ''
-                    popupAnchor:
-                      x: ''
-                      'y': ''
-                    html: '<div></div>'
-                    html_class: leaflet-map-divicon
-                    circle_marker_options: '{"radius":100,"color":"red","fillColor":"#f03","fillOpacity":0.5}'
-                  leaflet_markercluster:
-                    control: false
-                    options: '{"spiderfyOnMaxZoom":true,"showCoverageOnHover":true,"removeOutsideVisibleBounds": false}'
-                    excluded: ''
-                    include_path: false
-                  fullscreen:
-                    control: false
-                    options: '{"position":"topleft","pseudoFullscreen":false}'
-                  path: '{"color":"#3388ff","opacity":"1.0","stroke":true,"weight":3,"fill":"depends","fillColor":"*","fillOpacity":"0.2","radius":"6"}'
-                  feature_properties:
-                    values: ''
-                  geocoder:
-                    control: false
-                    settings:
-                      popup: false
-                      autocomplete:
-                        placeholder: 'Search Address'
-                        title: 'Search an Address on the Map'
-                      position: topright
-                      input_size: 20
-                      providers:
-                        nominatim:
-                          weight: 0
-                          checked: false
-                      min_terms: 4
-                      delay: 800
-                      zoom: 16
-                      options: ''
-                  map_lazy_load:
-                    lazy_load: true
-                third_party_settings: {  }
-            weight: 5
-            additional: {  }
           91e4b920-2499-4e9f-8e36-2aa11774306e:
             uuid: 91e4b920-2499-4e9f-8e36-2aa11774306e
             region: content
@@ -336,6 +197,38 @@ third_party_settings:
                   link: true
                 third_party_settings: {  }
             weight: 10
+            additional: {  }
+          a9cf0bc5-fe8d-48e6-8aed-4e298e2345f2:
+            uuid: a9cf0bc5-fe8d-48e6-8aed-4e298e2345f2
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_room'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 11
+            additional: {  }
+          5643ac2f-bf7c-4181-817a-7b1b5e56ff46:
+            uuid: 5643ac2f-bf7c-4181-817a-7b1b5e56ff46
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_speakers'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 12
             additional: {  }
         third_party_settings: {  }
   layout_builder_restrictions:
@@ -431,21 +324,6 @@ content:
     third_party_settings: {  }
     weight: 7
     region: content
-  field_event__location_address:
-    type: address_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 4
-    region: content
-  field_event__location_name:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 3
-    region: content
   field_featured_image:
     type: entity_reference_entity_view
     label: hidden
@@ -455,103 +333,6 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  field_geofield:
-    type: leaflet_formatter_default
-    label: hidden
-    settings:
-      multiple_map: false
-      leaflet_map: 'OSM Mapnik'
-      height: 400
-      height_unit: px
-      hide_empty_map: true
-      disable_wheel: false
-      gesture_handling: false
-      fitbounds_options: '{"padding":[0,0]}'
-      reset_map:
-        control: false
-        options: '{"position":"topleft","title":"Reset View"}'
-      map_scale:
-        control: false
-        options: '{"position":"bottomright","maxWidth":100,"metric":true,"imperial":false,"updateWhenIdle":false}'
-      locate:
-        control: false
-        options: '{"position":"topright","setView":"untilPanOrZoom","returnToPrevBounds":true,"keepCurrentZoomLevel":true,"strings":{"title":"Locate my position"}}'
-        automatic: false
-      leaflet_tooltip:
-        value: ''
-        options: '{"permanent":false,"direction":"center"}'
-      popup: false
-      popup_content: ''
-      leaflet_popup:
-        control: '0'
-        content: ''
-        options: '{"maxWidth":"300","minWidth":"50","autoPan":true}'
-      map_position:
-        force: false
-        center:
-          lat: 0.0
-          lon: 0.0
-        zoomControlPosition: topleft
-        zoom: 14
-        minZoom: 1
-        maxZoom: 20
-        zoomFiner: 0
-      icon:
-        iconType: marker
-        iconUrl: ''
-        shadowUrl: ''
-        className: ''
-        iconSize:
-          x: ''
-          'y': ''
-        iconAnchor:
-          x: ''
-          'y': ''
-        shadowSize:
-          x: ''
-          'y': ''
-        shadowAnchor:
-          x: ''
-          'y': ''
-        popupAnchor:
-          x: ''
-          'y': ''
-        html: '<div></div>'
-        html_class: leaflet-map-divicon
-        circle_marker_options: '{"radius":100,"color":"red","fillColor":"#f03","fillOpacity":0.5}'
-      leaflet_markercluster:
-        control: false
-        options: '{"spiderfyOnMaxZoom":true,"showCoverageOnHover":true,"removeOutsideVisibleBounds": false}'
-        excluded: ''
-        include_path: false
-      fullscreen:
-        control: false
-        options: '{"position":"topleft","pseudoFullscreen":false}'
-      path: '{"color":"#3388ff","opacity":"1.0","stroke":true,"weight":3,"fill":"depends","fillColor":"*","fillOpacity":"0.2","radius":"6"}'
-      feature_properties:
-        values: ''
-      geocoder:
-        control: false
-        settings:
-          popup: false
-          autocomplete:
-            placeholder: 'Search Address'
-            title: 'Search an Address on the Map'
-          position: topright
-          input_size: 20
-          providers:
-            nominatim:
-              weight: 0
-              checked: false
-          min_terms: 4
-          delay: 800
-          zoom: 16
-          options: ''
-      map_lazy_load:
-        lazy_load: true
-    third_party_settings: {  }
-    weight: 5
-    region: content
   field_partners:
     type: entity_reference_label
     label: above
@@ -559,6 +340,22 @@ content:
       link: true
     third_party_settings: {  }
     weight: 10
+    region: content
+  field_room:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_speakers:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
     region: content
   field_tags:
     type: entity_reference_label

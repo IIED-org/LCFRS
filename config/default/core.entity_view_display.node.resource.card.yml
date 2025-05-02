@@ -1,0 +1,32 @@
+uuid: 5223f305-8d1b-46db-8aac-78dfab0038c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.resource.field_description
+    - field.field.node.resource.field_featured_image
+    - field.field.node.resource.rabbit_hole__settings
+    - node.type.resource
+  module:
+    - user
+id: node.resource.card
+targetEntityType: node
+bundle: resource
+mode: card
+content:
+  field_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_featured_image: true
+  rabbit_hole__settings: true

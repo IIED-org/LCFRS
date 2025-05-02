@@ -1,0 +1,46 @@
+uuid: 3088b4a6-dfa2-4a5c-94b2-73e1eecd0b4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - ckeditor5
+format: full_html
+editor: ckeditor5
+settings:
+  toolbar:
+    items:
+      - heading
+      - bold
+      - italic
+      - blockQuote
+      - link
+      - bulletedList
+      - numberedList
+      - horizontalLine
+      - undo
+      - redo
+      - removeFormat
+      - insertTable
+      - sourceEditing
+  plugins:
+    ckeditor5_heading:
+      enabled_headings:
+        - heading1
+        - heading2
+        - heading3
+        - heading4
+        - heading5
+        - heading6
+    ckeditor5_list:
+      properties:
+        reversed: true
+        startIndex: true
+      multiBlock: true
+    ckeditor5_sourceEditing:
+      allowed_tags: {  }
+    linkit_extension:
+      linkit_enabled: false
+image_upload:
+  status: false
