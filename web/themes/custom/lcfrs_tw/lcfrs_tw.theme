@@ -19,3 +19,21 @@ function lcfrs_tw_preprocess_image_widget(array &$variables): void {
     unset($data['preview']);
   }
 }
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function lcfrs_tw_theme_suggestions_taxonomy_term_alter(array &$suggestions, array $variables) {
+  if (!empty($variables['elements']['#view_mode'])) {
+    $view_mode = $variables['elements']['#view_mode'];
+    // Add vocabulary--view_mode template
+    if (isset($variables['term'])) {
+      $vocab = $variables['term']->bundle();
+      $suggestions[] = 'taxonomy_term__' . $vocab . '__' . $view_mode;
+    }
+    // Add view mode template
+    $suggestions[] = 'taxonomy_term__' . $view_mode;
+  }
+}
+
+
