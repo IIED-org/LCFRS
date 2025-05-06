@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.update.field_content_paragraphs
     - field.field.node.update.field_description
+    - field.field.node.update.field_event__link
     - field.field.node.update.field_update_type
     - field.field.node.update.rabbit_hole__settings
     - node.type.update
@@ -30,5 +31,6 @@ content:
     region: content
 hidden:
   field_content_paragraphs: true
+  field_event__link: true
   field_update_type: true
   rabbit_hole__settings: true

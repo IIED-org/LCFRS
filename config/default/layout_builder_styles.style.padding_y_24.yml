@@ -1,10 +1,10 @@
-uuid: 64b09e45-652c-4bdf-a644-c7fdc4b79bc1
+uuid: 135057c3-2e0b-427c-a487-f1bf8b5282f6
 langcode: en
 status: true
 dependencies: {  }
-id: padding_y
-label: 'Padding Y 12'
-classes: py-12
+id: padding_y_24
+label: 'Padding Y 24'
+classes: py-24
 type: section
 group: spacing
 block_restrictions: {  }

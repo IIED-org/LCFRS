@@ -133,7 +133,13 @@ display:
           value:
             update: update
       style:
-        type: default
+        type: grid_responsive
+        options:
+          uses_fields: false
+          columns: 4
+          cell_min_width: 300
+          grid_gutter: 60
+          alignment: horizontal
       row:
         type: 'entity:node'
         options:

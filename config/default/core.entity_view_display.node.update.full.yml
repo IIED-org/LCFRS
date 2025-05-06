@@ -1,9 +1,9 @@
-uuid: 4dfc2bd8-e813-4ebb-96f4-624eb42986b8
+uuid: 433617fc-0b4b-4ebe-ad6f-96ab7d1a14b6
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.card
+    - core.entity_view_mode.node.full
     - field.field.node.update.field_content_paragraphs
     - field.field.node.update.field_description
     - field.field.node.update.field_event__link
@@ -13,39 +13,30 @@ dependencies:
   module:
     - link
     - user
-id: node.update.card
+id: node.update.full
 targetEntityType: node
 bundle: update
-mode: card
+mode: full
 content:
-  field_description:
-    type: basic_string
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 1
-    region: content
   field_event__link:
-    type: link_separate
+    type: link
     label: hidden
     settings:
-      trim_length: 30
+      trim_length: 80
       url_only: false
       url_plain: false
-      rel: '0'
-      target: '0'
+      rel: ''
+      target: ''
     third_party_settings: {  }
-    weight: 2
+    weight: 4
     region: content
-  field_update_type:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: false
+  links:
+    settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 100
     region: content
 hidden:
   field_content_paragraphs: true
-  links: true
+  field_description: true
+  field_update_type: true
   rabbit_hole__settings: true
