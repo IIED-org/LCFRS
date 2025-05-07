@@ -5,11 +5,13 @@ dependencies:
   config:
     - field.field.node.update.field_content_paragraphs
     - field.field.node.update.field_description
+    - field.field.node.update.field_event__link
     - field.field.node.update.field_update_type
     - field.field.node.update.rabbit_hole__settings
     - node.type.update
   module:
     - entity_reference_revisions
+    - link
     - user
 id: node.update.default
 targetEntityType: node
@@ -31,6 +33,18 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_event__link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
     region: content
   field_update_type:
     type: entity_reference_label

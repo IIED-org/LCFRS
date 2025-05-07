@@ -4,3 +4,6 @@ a.button-top {
 a.button-top:hover {
     background-color: #31C9D0 !important; 
   }
+  #btnSubmit {
+    color: #fff !important;
+  }

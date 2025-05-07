@@ -1,16 +1,16 @@
-uuid: ee808f2b-36e4-4b1f-aaf9-7cba5b136592
+uuid: 9f16d535-f1fe-4c04-85e0-2f0a73eeab6d
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.card
     - core.entity_view_mode.taxonomy_term.mini_card
-    - taxonomy.vocabulary.partners
+    - taxonomy.vocabulary.speakers
   module:
     - taxonomy
     - user
-id: partners
-label: Partners
+id: speakers
+label: Speakers
 module: views
 description: 'Shows lists of partners'
 tag: ''
@@ -23,7 +23,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: Partners
+      title: Speakers
       fields:
         name:
           id: name
@@ -77,7 +77,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 5
+          items_per_page: 6
       exposed_form:
         type: basic
         options:
@@ -114,11 +114,44 @@ display:
           id: vid
           table: taxonomy_term_field_data
           field: vid
+          relationship: none
+          group_type: group
+          admin_label: ''
           entity_type: taxonomy_term
           entity_field: vid
           plugin_id: bundle
+          operator: in
           value:
-            partners: partners
+            speakers: speakers
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
       style:
         type: default
       row:
@@ -151,6 +184,10 @@ display:
     display_plugin: block
     position: 1
     display_options:
+      pager:
+        type: none
+        options:
+          offset: 0
       style:
         type: grid_responsive
         options:
@@ -165,10 +202,11 @@ display:
           relationship: none
           view_mode: card
       defaults:
+        pager: false
         style: false
         row: false
       display_extenders: {  }
-      block_description: 'Partners page block'
+      block_description: 'Speakers page block'
     cache_metadata:
       max-age: -1
       contexts:
@@ -178,21 +216,18 @@ display:
       tags: {  }
   block_2:
     id: block_2
-    display_title: 'Partners homepage block'
+    display_title: 'Speakers homepage block'
     display_plugin: block
     position: 2
     display_options:
       style:
-        type: grid
+        type: grid_responsive
         options:
           uses_fields: false
           columns: 8
-          automatic_width: true
+          cell_min_width: 100
+          grid_gutter: 60
           alignment: horizontal
-          row_class_custom: ''
-          row_class_default: true
-          col_class_custom: ''
-          col_class_default: true
       row:
         type: 'entity:taxonomy_term'
         options:
@@ -203,7 +238,7 @@ display:
         row: false
       display_description: ''
       display_extenders: {  }
-      block_description: 'Partners homepage block'
+      block_description: 'Speakers homepage block'
     cache_metadata:
       max-age: -1
       contexts:
