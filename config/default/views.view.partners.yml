@@ -1,10 +1,10 @@
-uuid: ee808f2b-36e4-4b1f-aaf9-7cba5b136592
+uuid: 31ab4aa3-0599-496d-8046-fc224e51087a
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.card
-    - core.entity_view_mode.taxonomy_term.mini_card
+    - core.entity_view_mode.taxonomy_term.logo
     - taxonomy.vocabulary.partners
   module:
     - taxonomy
@@ -74,10 +74,10 @@ display:
           field_api_classes: false
           convert_spaces: false
       pager:
-        type: some
+        type: none
         options:
           offset: 0
-          items_per_page: 5
+          items_per_page: 0
       exposed_form:
         type: basic
         options:
@@ -120,12 +120,18 @@ display:
           value:
             partners: partners
       style:
-        type: default
+        type: grid_responsive
+        options:
+          uses_fields: false
+          columns: 6
+          cell_min_width: 220
+          grid_gutter: 30
+          alignment: horizontal
       row:
         type: 'entity:taxonomy_term'
         options:
           relationship: none
-          view_mode: card
+          view_mode: logo
       query:
         type: views_query
         options:
@@ -155,9 +161,9 @@ display:
         type: grid_responsive
         options:
           uses_fields: false
-          columns: 4
-          cell_min_width: 300
-          grid_gutter: 60
+          columns: 5
+          cell_min_width: 260
+          grid_gutter: 40
           alignment: horizontal
       row:
         type: 'entity:taxonomy_term'
@@ -182,23 +188,26 @@ display:
     display_plugin: block
     position: 2
     display_options:
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 6
       style:
-        type: grid
+        type: grid_responsive
         options:
           uses_fields: false
-          columns: 8
-          automatic_width: true
+          columns: 6
+          cell_min_width: 220
+          grid_gutter: 30
           alignment: horizontal
-          row_class_custom: ''
-          row_class_default: true
-          col_class_custom: ''
-          col_class_default: true
       row:
         type: 'entity:taxonomy_term'
         options:
           relationship: none
-          view_mode: mini_card
+          view_mode: logo
       defaults:
+        pager: false
         style: false
         row: false
       display_description: ''

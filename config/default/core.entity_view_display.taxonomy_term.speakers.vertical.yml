@@ -1,9 +1,9 @@
-uuid: 69834f05-faea-4016-97bd-e380f0929693
+uuid: 6198efd9-324e-4cb3-b675-f4a3d601775e
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.taxonomy_term.card
+    - core.entity_view_mode.taxonomy_term.vertical
     - field.field.taxonomy_term.speakers.field_organisation
     - field.field.taxonomy_term.speakers.field_photo
     - field.field.taxonomy_term.speakers.field_role_or_job_title
@@ -12,19 +12,18 @@ dependencies:
     - taxonomy.vocabulary.speakers
   module:
     - layout_builder
-    - link
 third_party_settings:
   layout_builder:
     enabled: false
     allow_custom: false
-id: taxonomy_term.speakers.card
+id: taxonomy_term.speakers.vertical
 targetEntityType: taxonomy_term
 bundle: speakers
-mode: card
+mode: vertical
 content:
   field_organisation:
     type: string
-    label: hidden
+    label: visually_hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -46,25 +45,7 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  field_sessions:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 4
-    region: content
-  field_website:
-    type: link
-    label: hidden
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    weight: 3
-    region: content
 hidden:
   description: true
+  field_sessions: true
+  field_website: true

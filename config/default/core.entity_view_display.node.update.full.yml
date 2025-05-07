@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.update.rabbit_hole__settings
     - node.type.update
   module:
+    - entity_reference_revisions
     - link
     - user
 id: node.update.full
@@ -18,6 +19,22 @@ targetEntityType: node
 bundle: update
 mode: full
 content:
+  field_content_paragraphs:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
   field_event__link:
     type: link
     label: hidden
@@ -28,15 +45,20 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 4
+    weight: 0
+    region: content
+  field_update_type:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 4
     region: content
 hidden:
-  field_content_paragraphs: true
-  field_description: true
-  field_update_type: true
   rabbit_hole__settings: true

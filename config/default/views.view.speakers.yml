@@ -1,10 +1,10 @@
-uuid: 9f16d535-f1fe-4c04-85e0-2f0a73eeab6d
+uuid: c602335c-c4ef-4a4a-a71b-b8f73dc42b3d
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.card
-    - core.entity_view_mode.taxonomy_term.mini_card
+    - core.entity_view_mode.taxonomy_term.vertical
     - taxonomy.vocabulary.speakers
   module:
     - taxonomy
@@ -12,7 +12,7 @@ dependencies:
 id: speakers
 label: Speakers
 module: views
-description: 'Shows lists of partners'
+description: 'Shows lists of speakers'
 tag: ''
 base_table: taxonomy_term_field_data
 base_field: tid
@@ -74,10 +74,10 @@ display:
           field_api_classes: false
           convert_spaces: false
       pager:
-        type: some
+        type: none
         options:
           offset: 0
-          items_per_page: 6
+          items_per_page: 0
       exposed_form:
         type: basic
         options:
@@ -96,7 +96,21 @@ display:
         type: tag
         options: {  }
       empty: {  }
-      sorts: {  }
+      sorts:
+        created:
+          id: created
+          table: taxonomy_index
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: minute
       arguments: {  }
       filters:
         status:
@@ -114,46 +128,19 @@ display:
           id: vid
           table: taxonomy_term_field_data
           field: vid
-          relationship: none
-          group_type: group
-          admin_label: ''
           entity_type: taxonomy_term
           entity_field: vid
           plugin_id: bundle
-          operator: in
           value:
             speakers: speakers
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
       style:
-        type: default
+        type: grid_responsive
+        options:
+          uses_fields: false
+          columns: 4
+          cell_min_width: 320
+          grid_gutter: 60
+          alignment: horizontal
       row:
         type: 'entity:taxonomy_term'
         options:
@@ -180,20 +167,16 @@ display:
       tags: {  }
   block_1:
     id: block_1
-    display_title: Block
+    display_title: 'Speakers page block'
     display_plugin: block
     position: 1
     display_options:
-      pager:
-        type: none
-        options:
-          offset: 0
       style:
         type: grid_responsive
         options:
           uses_fields: false
           columns: 4
-          cell_min_width: 300
+          cell_min_width: 320
           grid_gutter: 60
           alignment: horizontal
       row:
@@ -202,9 +185,9 @@ display:
           relationship: none
           view_mode: card
       defaults:
-        pager: false
         style: false
         row: false
+      display_description: ''
       display_extenders: {  }
       block_description: 'Speakers page block'
     cache_metadata:
@@ -220,20 +203,26 @@ display:
     display_plugin: block
     position: 2
     display_options:
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 6
       style:
         type: grid_responsive
         options:
           uses_fields: false
-          columns: 8
-          cell_min_width: 100
-          grid_gutter: 60
+          columns: 6
+          cell_min_width: 220
+          grid_gutter: 30
           alignment: horizontal
       row:
         type: 'entity:taxonomy_term'
         options:
           relationship: none
-          view_mode: mini_card
+          view_mode: vertical
       defaults:
+        pager: false
         style: false
         row: false
       display_description: ''

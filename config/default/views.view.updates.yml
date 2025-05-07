@@ -167,10 +167,27 @@ display:
       tags: {  }
   block_1:
     id: block_1
-    display_title: Block
+    display_title: 'Updates page block'
     display_plugin: block
     position: 1
     display_options:
+      style:
+        type: grid_responsive
+        options:
+          uses_fields: false
+          columns: 4
+          cell_min_width: 300
+          grid_gutter: 60
+          alignment: horizontal
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: card
+      defaults:
+        style: false
+        row: false
+      display_description: ''
       display_extenders: {  }
       block_description: 'Updates page block'
     cache_metadata:
@@ -191,9 +208,24 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 5
+          items_per_page: 4
+      style:
+        type: grid_responsive
+        options:
+          uses_fields: false
+          columns: 4
+          cell_min_width: 320
+          grid_gutter: 60
+          alignment: horizontal
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: card
       defaults:
         pager: false
+        style: false
+        row: false
       display_description: ''
       display_extenders: {  }
       block_description: 'Latest updates block'

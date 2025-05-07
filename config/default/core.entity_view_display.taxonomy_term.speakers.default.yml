@@ -6,6 +6,7 @@ dependencies:
     - field.field.taxonomy_term.speakers.field_organisation
     - field.field.taxonomy_term.speakers.field_photo
     - field.field.taxonomy_term.speakers.field_role_or_job_title
+    - field.field.taxonomy_term.speakers.field_sessions
     - field.field.taxonomy_term.speakers.field_website
     - taxonomy.vocabulary.speakers
   module:
@@ -46,6 +47,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_sessions:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
     region: content
   field_website:
     type: link

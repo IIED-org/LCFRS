@@ -1,18 +1,16 @@
-uuid: f7d2d9ee-3ce2-4377-81dd-4bdfb9782f7a
+uuid: 9569482a-3b51-4527-ac89-46da6ff1ae51
 langcode: en
 status: true
 dependencies:
   module:
-    - media
     - node
-_core:
-  default_config_hash: LAyl7XZzE34IbJjHdARpu8jpNketNqZPBjxQtFMUlb8
-id: node.field_event__file
-field_name: field_event__file
+    - taxonomy
+id: node.field_session_type
+field_name: field_session_type
 entity_type: node
 type: entity_reference
 settings:
-  target_type: media
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: 1

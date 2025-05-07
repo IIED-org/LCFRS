@@ -5,21 +5,21 @@ dependencies:
   config:
     - core.entity_view_mode.node.full
     - field.field.node.event.field_content
+    - field.field.node.event.field_content_paragraphs
     - field.field.node.event.field_description
     - field.field.node.event.field_event__date
-    - field.field.node.event.field_event__file
-    - field.field.node.event.field_event__link
-    - field.field.node.event.field_featured_image
+    - field.field.node.event.field_notifications
     - field.field.node.event.field_partners
     - field.field.node.event.field_room
+    - field.field.node.event.field_session_type
     - field.field.node.event.field_speakers
     - field.field.node.event.field_tags
     - node.type.event
   module:
     - date_augmenter
+    - entity_reference_revisions
     - layout_builder
     - layout_builder_restrictions
-    - link
     - smart_date
     - text
     - user
@@ -46,28 +46,49 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
-  field_event__date:
-    type: smartdate_default
+  field_content_paragraphs:
+    type: entity_reference_revisions_entity_view
     label: hidden
     settings:
-      timezone_override: ''
-      format_type: medium
-      format: default
-      force_chronological: false
-      add_classes: false
-      time_wrapper: true
-      localize: false
-      parts:
-        start: start
-        end: end
-        duration: '0'
-      duration:
-        separator: ' | '
-        unit: ''
-        decimals: 2
-        suffix: h
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_event__date:
+    type: smartdate_custom
+    label: hidden
+    settings:
+      separator: ' – '
+      time_diff:
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: '2'
+        refresh: '60'
+        enabled: 0
+        description: ''
+      date_format: ''
+      custom_date_format: ''
+      timezone: Europe/London
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      join: ', '
+      time_format: 'H:i'
+      time_hour_format: ''
+      allday_label: 'All day'
+      date_first: '1'
+      site_time_toggle: '1'
+      ampm_reduce: 0
     third_party_settings:
       date_augmenter:
         instances:
@@ -92,71 +113,57 @@ content:
               ignore_timezone_if_UTC: true
           augmenter_settings:
             fields__field_event__date__settings_edit_form__third_party_settings__date_augmenter__instances__augmenter_settings__active_tab: ''
-    weight: 1
+    weight: 2
     region: content
-  field_event__file:
-    type: entity_reference_entity_view
+  field_notifications:
+    type: text_default
     label: hidden
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    weight: 5
-    region: content
-  field_event__link:
-    type: link
-    label: hidden
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    weight: 4
-    region: content
-  field_featured_image:
-    type: entity_reference_entity_view
-    label: hidden
-    settings:
-      view_mode: 16_9_wide
-      link: false
+    settings: {  }
     third_party_settings: {  }
     weight: 0
     region: content
   field_partners:
-    type: entity_reference_label
-    label: above
+    type: entity_reference_entity_view
+    label: hidden
     settings:
-      link: true
+      view_mode: logo
+      link: false
     third_party_settings: {  }
     weight: 7
     region: content
   field_room:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 2
+    weight: 3
+    region: content
+  field_session_type:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 5
     region: content
   field_speakers:
-    type: entity_reference_label
-    label: above
+    type: entity_reference_entity_view
+    label: hidden
     settings:
-      link: true
+      view_mode: horizontal
+      link: false
     third_party_settings: {  }
     weight: 8
     region: content
   field_tags:
     type: entity_reference_label
-    label: inline
+    label: hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     weight: 6
     region: content
 hidden:
   content_moderation_control: true
-  field_description: true
   links: true

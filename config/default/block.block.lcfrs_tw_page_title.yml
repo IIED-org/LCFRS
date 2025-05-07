@@ -31,6 +31,5 @@ visibility:
     context_mapping:
       node: '@node.node_route_context:node'
     bundles:
-      event: event
       page: page
       resource: resource

@@ -1,12 +1,13 @@
-uuid: 075d2a80-753c-42dd-8654-799fbcf8897b
+uuid: 8ced6cda-b9be-45ef-b378-193c0b52829e
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.taxonomy_term.mini_card
+    - core.entity_view_mode.taxonomy_term.horizontal
     - field.field.taxonomy_term.speakers.field_organisation
     - field.field.taxonomy_term.speakers.field_photo
     - field.field.taxonomy_term.speakers.field_role_or_job_title
+    - field.field.taxonomy_term.speakers.field_sessions
     - field.field.taxonomy_term.speakers.field_website
     - taxonomy.vocabulary.speakers
   module:
@@ -15,14 +16,14 @@ third_party_settings:
   layout_builder:
     enabled: false
     allow_custom: false
-id: taxonomy_term.speakers.mini_card
+id: taxonomy_term.speakers.horizontal
 targetEntityType: taxonomy_term
 bundle: speakers
-mode: mini_card
+mode: horizontal
 content:
   field_organisation:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -46,4 +47,5 @@ content:
     region: content
 hidden:
   description: true
+  field_sessions: true
   field_website: true
