@@ -22,19 +22,13 @@
  *
  * @see template_preprocess_taxonomy_term()
  */
+    For speakers when they appear on the homepage
 #}
-{# For partner cards when they appear on the partners page #}
 
-<div class="mb-6 border border-neutral-300 bg-white h-full flex flex-col justify-between px-4 pb-4">
-  <div class="relative flex flex-col">
-    <div class="mx-auto">{{ content.field_logo }}</div>
-    <div class="text-xl font-semibold font-display text-neutral-900">{{ name }}</div>
-    <div class="prose">{{ content.description }}</div>
+  <div class="flex flex-col items-center justify-center text-center">
+    <div class="mb-4 overflow-hidden rounded-full max-w-48">{{ content.field_photo }}</div>
+    <div class="mb-4 text-xl font-semibold font-display text-neutral-900">{{ name }}</div>
+    <div class="mb-4">{{ content.field_role_or_job_title }}</div>
+    <div class="mb-4 text-neutral-600">{{ content.field_organisation }}</div>
   </div>
-  <div class="button flex items-center">
-      {{ content.field_website }}
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
-        <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd" />
-      </svg>
-</div>
-</div>
+
