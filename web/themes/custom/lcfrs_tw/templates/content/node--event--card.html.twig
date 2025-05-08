@@ -60,17 +60,25 @@
  *
  */
 #}
-<article{{ attributes.addClass('h-full') }}>
+<article{{ attributes.addClass('h-full group') }}>
   <a href="{{ url }}" class="hover:no-underline">
 
-    <div class="bg-fs-cyan-100 h-full flex flex-col justify-between p-4 prose">
-      <div class="mb-2 font-bold text-lg">{{ node.label }}</div>
+    <div class="flex flex-col justify-between h-full p-4 prose bg-fs-cyan-100 group-hover:shadow-lg">
+      <div class="mb-2 text-lg font-bold">{{ node.label }}</div>
       <div class="flex gap-2 mb-6 text-sm">
         {{ content.field_session_type }}
         {{ content.field_tags }}
       </div>
       <div class="">{{ content.field_speakers }}</div>
 
+      <div class="flex justify-end mt-4">
+        <div class="inline-block p-2 duration-150 ease-in transform border rounded-full border-fs-cyan-500 group-hover:border-fs-violet-400 group-hover:bg-white">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"> 
+            <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+      </div>
+      
     </div>
 
   </a>
