@@ -1,17 +1,16 @@
-uuid: 5000562c-e1c8-438b-a34a-b932311d0595
+uuid: 3c3b3987-8657-4751-92ec-bdddb7e341f0
 langcode: en
 status: true
 dependencies:
   module:
     - node
+    - taxonomy
 id: node.field_room
 field_name: field_room
 entity_type: node
-type: string
+type: entity_reference
 settings:
-  max_length: 255
-  case_sensitive: false
-  is_ascii: false
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: 1

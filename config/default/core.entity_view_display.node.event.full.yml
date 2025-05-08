@@ -132,10 +132,10 @@ content:
     weight: 7
     region: content
   field_room:
-    type: string
+    type: entity_reference_label
     label: hidden
     settings:
-      link_to_entity: false
+      link: false
     third_party_settings: {  }
     weight: 3
     region: content

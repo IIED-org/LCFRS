@@ -144,22 +144,6 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 10
             additional: {  }
-          a9cf0bc5-fe8d-48e6-8aed-4e298e2345f2:
-            uuid: a9cf0bc5-fe8d-48e6-8aed-4e298e2345f2
-            region: content
-            configuration:
-              id: 'field_block:node:event:field_room'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: string
-                label: above
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-            weight: 11
-            additional: {  }
           5643ac2f-bf7c-4181-817a-7b1b5e56ff46:
             uuid: 5643ac2f-bf7c-4181-817a-7b1b5e56ff46
             region: content
@@ -223,6 +207,22 @@ third_party_settings:
                   link: ''
                 third_party_settings: {  }
             weight: 15
+            additional: {  }
+          4da8e1f7-3d6b-4fe6-8965-32ac7791e2aa:
+            uuid: 4da8e1f7-3d6b-4fe6-8965-32ac7791e2aa
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_room'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 16
             additional: {  }
         third_party_settings: {  }
   layout_builder_restrictions:
@@ -322,12 +322,12 @@ content:
     weight: 10
     region: content
   field_room:
-    type: string
+    type: entity_reference_label
     label: above
     settings:
-      link_to_entity: false
+      link: true
     third_party_settings: {  }
-    weight: 11
+    weight: 15
     region: content
   field_session_type:
     type: entity_reference_label

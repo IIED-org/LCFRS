@@ -1,0 +1,13 @@
+uuid: 59aafdbe-bf66-445c-8dbc-ee5c96836c05
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.room
+id: taxonomy_term.room
+targetEntityType: taxonomy_term
+bundle: room
+action: page_not_found
+no_bypass: false
+bypass_message: false
+configuration: {  }
