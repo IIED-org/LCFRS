@@ -1,17 +1,16 @@
-uuid: 3c3b3987-8657-4751-92ec-bdddb7e341f0
+uuid: d893c674-210f-4fc7-8f26-5af07dbadde6
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - taxonomy
-id: node.field_room
-field_name: field_room
+    - text
+id: node.field_notifications
+field_name: field_notifications
 entity_type: node
-type: entity_reference
-settings:
-  target_type: taxonomy_term
-module: core
+type: text_long
+settings: {  }
+module: text
 locked: false
 cardinality: 1
 translatable: true

@@ -1,16 +1,16 @@
-uuid: 879e6c5a-125f-4b99-819c-2edda453161a
+uuid: 13aa19e0-5f02-4878-b75f-aa19aee218a0
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_room
+    - field.storage.node.field_session_type
     - node.type.event
-    - taxonomy.vocabulary.room
-id: node.event.field_room
-field_name: field_room
+    - taxonomy.vocabulary.session_type
+id: node.event.field_session_type
+field_name: field_session_type
 entity_type: node
 bundle: event
-label: Room
+label: 'Session type'
 description: ''
 required: false
 translatable: false
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      room: room
+      session_type: session_type
     sort:
       field: name
       direction: asc

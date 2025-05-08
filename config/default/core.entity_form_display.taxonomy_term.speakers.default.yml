@@ -6,12 +6,14 @@ dependencies:
     - field.field.taxonomy_term.speakers.field_organisation
     - field.field.taxonomy_term.speakers.field_photo
     - field.field.taxonomy_term.speakers.field_role_or_job_title
+    - field.field.taxonomy_term.speakers.field_sessions
     - field.field.taxonomy_term.speakers.field_website
     - taxonomy.vocabulary.speakers
   module:
     - link
     - media_library
     - path
+    - tagify
     - text
 id: taxonomy_term.speakers.default
 targetEntityType: taxonomy_term
@@ -49,6 +51,15 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_sessions:
+    type: tagify_select_widget
+    weight: 6
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      placeholder: ''
+    third_party_settings: {  }
   field_website:
     type: link_default
     weight: 5
@@ -67,13 +78,13 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 7
+    weight: 8
     region: content
     settings:
       display_label: true

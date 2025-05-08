@@ -1,0 +1,11 @@
+uuid: 45d5a3c3-66aa-4cd1-9d36-309537069e92
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.logo
+label: Logo
+description: 'Small partner card for homepage and sessions'
+targetEntityType: taxonomy_term
+cache: true

@@ -5,13 +5,13 @@ dependencies:
   config:
     - core.entity_view_mode.node.card
     - field.field.node.event.field_content
+    - field.field.node.event.field_content_paragraphs
     - field.field.node.event.field_description
     - field.field.node.event.field_event__date
-    - field.field.node.event.field_event__file
-    - field.field.node.event.field_event__link
-    - field.field.node.event.field_featured_image
+    - field.field.node.event.field_notifications
     - field.field.node.event.field_partners
     - field.field.node.event.field_room
+    - field.field.node.event.field_session_type
     - field.field.node.event.field_speakers
     - field.field.node.event.field_tags
     - node.type.event
@@ -36,7 +36,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 3
     region: content
   field_event__date:
     type: smartdate_default
@@ -84,14 +84,42 @@ content:
             fields__field_event__date__settings_edit_form__third_party_settings__date_augmenter__instances__augmenter_settings__active_tab: ''
     weight: 0
     region: content
+  field_room:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_session_type:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_speakers:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
 hidden:
   content_moderation_control: true
   field_content: true
-  field_event__file: true
-  field_event__link: true
-  field_featured_image: true
+  field_content_paragraphs: true
+  field_notifications: true
   field_partners: true
-  field_room: true
-  field_speakers: true
-  field_tags: true
   links: true

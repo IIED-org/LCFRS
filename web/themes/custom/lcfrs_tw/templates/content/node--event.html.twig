@@ -71,6 +71,7 @@
     'container',
     'mx-auto',
     'px-4',
+    'mb-12',
   ]
 %}
 {{ attach_library('lcfrs_tw/node') }}
@@ -84,16 +85,27 @@
   {% endif %}
   {{ title_suffix }}
 
-
   <div{{ content_attributes.addClass('node__content prose prose-lg mx-auto') }}>
-    <div class="mb-6"><a href="/{{ node.type.entity.label }} ">{{ node.type.entity.label }}</a></div>
+    <div class="mb-6"><a href="/programme">Programme</a> / <span class="text-neutral-500">Session information</span></div>
     <h1 class="page-title mx-auto max-w-prose">{{ node.label }}</h1>
-  
-    <div class="prose prose-lg mx-auto">
-      <div class="mb-6 prose-lg lg:prose-xl">{{ content.field_description }}<div>
-      <div class="mb-6">{{ date }}</div>
+    <div class="mb-6 font-bold flex gap-2">{{ content.field_event__date }} {{ " in " }} {{ content.field_room }}</div>
+    <div class="mb-6 bg-fs-violet-100 px-4 py-px">{{ content.field_notifications }}</div>
+    <div class="flex gap-2 mb-6">
+      {{ content.field_session_type }}
+      {{ content.field_tags }}
     </div>
-    {{ content.field_content_paragraphs }}
+    <div class="mb-6 lg:prose-xl">{{ content.field_description }}</div>
+    <div class="not-prose">{{ content.field_speakers }}</div>
+    <div class="">{{ content.field_content }}</div>
+    <div class="">{{ content.field_content_paragraphs }}
+    <div class="grid grid-cols-4 gap-4 not-prose">{{ content.field_partners }}</div>
+
   </div>
 
 </article>
+<div class="bg-fs-green-100 h-32">
+  <div class="container mx-auto px-4 py-6">
+    Standard footer with partner logos
+  </div>  
+</div>
+  

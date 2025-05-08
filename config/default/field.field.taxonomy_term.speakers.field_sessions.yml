@@ -1,28 +1,26 @@
-uuid: f8bba3b9-0654-40c2-8758-d767f67a3bc7
+uuid: 9fc7c5f6-6778-4dc0-9fd7-09a56312e1b0
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_event__file
-    - media.type.document
+    - field.storage.taxonomy_term.field_sessions
     - node.type.event
-_core:
-  default_config_hash: HvAZSXvZiMZM3zkE3GVErM551jNtS3P_6iuxfTjU7IM
-id: node.event.field_event__file
-field_name: field_event__file
-entity_type: node
-bundle: event
-label: File
+    - taxonomy.vocabulary.speakers
+id: taxonomy_term.speakers.field_sessions
+field_name: field_sessions
+entity_type: taxonomy_term
+bundle: speakers
+label: Sessions
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:media'
+  handler: 'default:node'
   handler_settings:
     target_bundles:
-      document: document
+      event: event
     sort:
       field: _none
       direction: ASC

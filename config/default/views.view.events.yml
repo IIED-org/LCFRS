@@ -7,7 +7,6 @@ dependencies:
     - field.storage.node.field_event__date
     - node.type.event
   module:
-    - add_content_by_bundle
     - node
     - smart_date
     - user
@@ -212,21 +211,7 @@ display:
           query_tags: {  }
       relationships: {  }
       group_by: false
-      header:
-        add_content_by_bundle:
-          id: add_content_by_bundle
-          table: views
-          field: add_content_by_bundle
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: add_content_by_bundle
-          label: 'Add an event'
-          empty: true
-          bundle: event
-          class: button
-          target: ''
-          width: 600
+      header: {  }
       footer: {  }
       display_extenders: {  }
     cache_metadata:
@@ -248,8 +233,23 @@ display:
         type: none
         options:
           offset: 0
+      style:
+        type: grid_responsive
+        options:
+          uses_fields: false
+          columns: 5
+          cell_min_width: 260
+          grid_gutter: 40
+          alignment: horizontal
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: card
       defaults:
         pager: false
+        style: false
+        row: false
       display_description: ''
       display_extenders: {  }
       block_description: 'Sessions page block'

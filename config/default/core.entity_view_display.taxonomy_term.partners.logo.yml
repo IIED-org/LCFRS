@@ -1,9 +1,9 @@
-uuid: dc95f024-729a-40ec-8e81-b3bb9c1462e4
+uuid: 4c22cd4a-a8ab-4def-9428-f1965a4bc69b
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.taxonomy_term.mini_card
+    - core.entity_view_mode.taxonomy_term.logo
     - field.field.taxonomy_term.partners.field_logo
     - field.field.taxonomy_term.partners.field_partner_type
     - field.field.taxonomy_term.partners.field_website
@@ -14,10 +14,10 @@ third_party_settings:
   layout_builder:
     enabled: false
     allow_custom: false
-id: taxonomy_term.partners.mini_card
+id: taxonomy_term.partners.logo
 targetEntityType: taxonomy_term
 bundle: partners
-mode: mini_card
+mode: logo
 content:
   field_logo:
     type: entity_reference_entity_view
