@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.event.field_notifications
     - field.field.node.event.field_partners
     - field.field.node.event.field_room
+    - field.field.node.event.field_session_id
     - field.field.node.event.field_session_type
     - field.field.node.event.field_speakers
     - field.field.node.event.field_tags
@@ -61,6 +62,7 @@ hidden:
   field_notifications: true
   field_partners: true
   field_room: true
+  field_session_id: true
   field_session_type: true
   field_speakers: true
   field_tags: true

@@ -153,10 +153,10 @@ display:
             format: content_format
           tokenize: false
       sorts:
-        field_room_target_id:
-          id: field_room_target_id
-          table: node__field_room
-          field: field_room_target_id
+        field_session_id_target_id:
+          id: field_session_id_target_id
+          table: node__field_session_id
+          field: field_session_id_target_id
           relationship: none
           group_type: group
           admin_label: ''
@@ -166,20 +166,6 @@ display:
             label: ''
             field_identifier: ''
           exposed: false
-        field_event__date_value:
-          id: field_event__date_value
-          table: node__field_event__date
-          field: field_event__date_value
-          relationship: none
-          group_type: min
-          admin_label: ''
-          plugin_id: date
-          order: DESC
-          expose:
-            label: ''
-            field_identifier: field_event__date_value
-          exposed: false
-          granularity: second
       arguments: {  }
       filters:
         type:
@@ -438,7 +424,7 @@ display:
         type: grid_responsive
         options:
           uses_fields: false
-          columns: 5
+          columns: 1
           cell_min_width: 260
           grid_gutter: 20
           alignment: horizontal
@@ -501,7 +487,7 @@ display:
       tags: {  }
   attachment_1:
     id: attachment_1
-    display_title: 'Attachment 9.45-11:15'
+    display_title: 'Attachment 10:00-11:30'
     display_plugin: attachment
     position: 2
     display_options:
@@ -635,10 +621,10 @@ display:
           field: area_text_custom
           relationship: none
           group_type: group
-          admin_label: 'Time 09:45'
+          admin_label: 'Time 10:00'
           plugin_id: text_custom
           empty: false
-          content: "<div class=\"flex items-center my-4 lg:my-0\">\r\n    <div class=\"w-16 text-lg font-bold text-fs-violet-500\">09:45</div>\r\n    <div class=\"flex-1 border border-fs-cyan-200 max-lg:hidden\"></div>\r\n</div>"
+          content: "<div class=\"flex items-center my-4 lg:my-0\">\r\n    <div class=\"w-16 text-lg font-bold text-fs-violet-500\">10:00</div>\r\n    <div class=\"flex-1 border border-fs-cyan-200 max-lg:hidden\"></div>\r\n</div>"
           tokenize: false
       display_extenders: {  }
       displays:
@@ -789,10 +775,10 @@ display:
           field: area_text_custom
           relationship: none
           group_type: group
-          admin_label: 'Time 11:15'
+          admin_label: 'Time 11:30'
           plugin_id: text_custom
           empty: false
-          content: "<div class=\"flex items-center my-4 lg:my-0\">\r\n    <div class=\"w-16 text-lg font-bold text-fs-violet-500\">11:15</div>\r\n    <div class=\"flex-1 border border-fs-cyan-200 max-lg:hidden\"></div>\r\n</div>"
+          content: "<div class=\"flex items-center my-4 lg:my-0\">\r\n    <div class=\"w-16 text-lg font-bold text-fs-violet-500\">11:30</div>\r\n    <div class=\"flex-1 border border-fs-cyan-200 max-lg:hidden\"></div>\r\n</div>"
           tokenize: false
         area_text_custom_1:
           id: area_text_custom_1
@@ -987,10 +973,10 @@ display:
           field: area_text_custom
           relationship: none
           group_type: group
-          admin_label: 'Time 14:45'
+          admin_label: 'Time 14:15'
           plugin_id: text_custom
           empty: false
-          content: "<div class=\"flex items-center my-4 lg:my-0\">\r\n    <div class=\"w-16 text-lg font-bold text-fs-violet-500\">14:45</div>\r\n    <div class=\"flex-1 border border-fs-cyan-200 max-lg:hidden\"></div>\r\n</div>\r\n"
+          content: "<div class=\"flex items-center my-4 lg:my-0\">\r\n    <div class=\"w-16 text-lg font-bold text-fs-violet-500\">14:15</div>\r\n    <div class=\"flex-1 border border-fs-cyan-200 max-lg:hidden\"></div>\r\n</div>\r\n"
           tokenize: false
       display_extenders: {  }
       displays:
@@ -1118,7 +1104,7 @@ display:
         type: grid_responsive
         options:
           uses_fields: false
-          columns: 5
+          columns: 1
           cell_min_width: 260
           grid_gutter: 20
           alignment: horizontal
@@ -1295,7 +1281,7 @@ display:
         type: grid_responsive
         options:
           uses_fields: false
-          columns: 5
+          columns: 1
           cell_min_width: 260
           grid_gutter: 20
           alignment: horizontal

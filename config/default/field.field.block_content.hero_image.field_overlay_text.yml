@@ -1,0 +1,24 @@
+uuid: b5592dff-91a5-4e38-a52a-5964d9b309d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_image
+    - field.storage.block_content.field_overlay_text
+    - filter.format.full_html
+  module:
+    - text
+id: block_content.hero_image.field_overlay_text
+field_name: field_overlay_text
+entity_type: block_content
+bundle: hero_image
+label: 'Overlay text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

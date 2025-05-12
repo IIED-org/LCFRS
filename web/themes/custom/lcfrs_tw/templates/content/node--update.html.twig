@@ -86,12 +86,14 @@
 
 
   <div{{ content_attributes.addClass('node__content prose prose-lg mx-auto') }}>
-    <div class="mb-6"><a href="/{{ node.type.entity.label }} ">{{ node.type.entity.label }}</a></div>
-    <h1 class="page-title mx-auto max-w-prose">{{ node.label }}</h1>
-  
-    <div class="prose prose-lg mx-auto">
+    <div class="mb-6"><a href="/{{ node.type.entity.label }} ">{{ node.type.entity.label }}</a> / <span class="text-neutral-500">{{ " " }} {{ node.created.value|date('j F Y') }}</span></div>
+
+
+
+    <h1 class="mx-auto page-title max-w-prose">{{ node.label }}</h1>
+    <div class="mx-auto prose prose-lg">
       <div class="mb-6 prose-lg lg:prose-xl">{{ content.field_description }}<div>
-      <div class="mb-6">{{ date }}</div>
+      
     </div>
     {{ content.field_content_paragraphs }}
   </div>

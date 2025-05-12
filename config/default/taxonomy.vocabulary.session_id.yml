@@ -1,15 +1,10 @@
-uuid: 6197b88c-8b1f-428c-9b86-740de39932d7
+uuid: dff1ace6-c114-4d52-b20c-30ccb7bd67e5
 langcode: en
 status: true
 dependencies:
   module:
-    - menu_ui
     - scheduler
 third_party_settings:
-  menu_ui:
-    available_menus:
-      - main
-    parent: 'main:'
   scheduler:
     expand_fieldset: when_required
     fields_display_mode: vertical_tab
@@ -23,10 +18,8 @@ third_party_settings:
     unpublish_enable: false
     unpublish_required: false
     unpublish_revision: false
-name: Update
-type: update
-description: 'Articles, announcements, press releases etc. Can be added as full page or link to external site.'
-help: null
-new_revision: true
-preview_mode: 1
-display_submitted: false
+name: 'Session ID'
+vid: session_id
+description: null
+weight: 0
+new_revision: false

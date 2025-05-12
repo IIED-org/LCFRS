@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.event.field_notifications
     - field.field.node.event.field_partners
     - field.field.node.event.field_room
+    - field.field.node.event.field_session_id
     - field.field.node.event.field_session_type
     - field.field.node.event.field_speakers
     - field.field.node.event.field_tags
@@ -46,7 +47,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   field_content_paragraphs:
     type: entity_reference_revisions_entity_view
@@ -55,14 +56,14 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_description:
     type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 9
+    weight: 10
     region: content
   field_event__date:
     type: smartdate_custom
@@ -113,14 +114,14 @@ content:
               ignore_timezone_if_UTC: true
           augmenter_settings:
             fields__field_event__date__settings_edit_form__third_party_settings__date_augmenter__instances__augmenter_settings__active_tab: ''
-    weight: 2
+    weight: 3
     region: content
   field_notifications:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   field_partners:
     type: entity_reference_entity_view
@@ -129,7 +130,7 @@ content:
       view_mode: logo
       link: false
     third_party_settings: {  }
-    weight: 7
+    weight: 8
     region: content
   field_room:
     type: entity_reference_label
@@ -137,7 +138,15 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 3
+    weight: 4
+    region: content
+  field_session_id:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 0
     region: content
   field_session_type:
     type: entity_reference_label
@@ -145,7 +154,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 5
+    weight: 6
     region: content
   field_speakers:
     type: entity_reference_entity_view
@@ -154,7 +163,7 @@ content:
       view_mode: horizontal
       link: false
     third_party_settings: {  }
-    weight: 8
+    weight: 9
     region: content
   field_tags:
     type: entity_reference_label
@@ -162,7 +171,7 @@ content:
     settings:
       link: false
     third_party_settings: {  }
-    weight: 6
+    weight: 7
     region: content
 hidden:
   content_moderation_control: true

@@ -1,0 +1,8 @@
+uuid: 36b846f0-fe75-4562-8c97-d56ebe67401f
+langcode: en
+status: true
+dependencies: {  }
+id: hero_image
+label: 'Hero image'
+revision: false
+description: 'Full width image'

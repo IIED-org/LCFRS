@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.event.field_notifications
     - field.field.node.event.field_partners
     - field.field.node.event.field_room
+    - field.field.node.event.field_session_id
     - field.field.node.event.field_session_type
     - field.field.node.event.field_speakers
     - field.field.node.event.field_tags
@@ -224,6 +225,22 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 16
             additional: {  }
+          58ffc31f-c4a1-4edf-99ed-9a3137d2ecfc:
+            uuid: 58ffc31f-c4a1-4edf-99ed-9a3137d2ecfc
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_session_id'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 17
+            additional: {  }
         third_party_settings: {  }
   layout_builder_restrictions:
     allowed_block_categories: {  }
@@ -328,6 +345,14 @@ content:
       link: true
     third_party_settings: {  }
     weight: 15
+    region: content
+  field_session_id:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 16
     region: content
   field_session_type:
     type: entity_reference_label
