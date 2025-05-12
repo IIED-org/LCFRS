@@ -1,0 +1,13 @@
+uuid: aba67a63-84cc-417e-8dce-a0ac21439480
+langcode: en
+status: true
+dependencies: {  }
+id: violet_red_gradient_background
+label: 'Dark violet-red gradient background'
+classes: bg-fs-violet-red-800
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions:
+  - layout_onecol
+weight: 0

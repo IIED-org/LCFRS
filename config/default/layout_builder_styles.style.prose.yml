@@ -1,0 +1,18 @@
+uuid: d5cd00c7-2ffc-4e95-b0da-4637c1213321
+langcode: en
+status: true
+dependencies: {  }
+id: prose
+label: Prose
+classes: "prose\r\nprose-lg"
+type: component
+group: spacing
+block_restrictions:
+  - 'field_block:node:page:field_content'
+  - 'field_block:node:event:field_content_paragraphs'
+  - 'field_block:node:page:title'
+  - 'inline_block:banner'
+  - 'inline_block:basic_block'
+  - 'inline_block:content_paragraphs_block'
+layout_restrictions: {  }
+weight: 0

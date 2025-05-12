@@ -1,0 +1,13 @@
+uuid: 132f9a4e-1adf-4054-bfe4-f5271752d9ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.session_id
+id: taxonomy_term.session_id
+targetEntityType: taxonomy_term
+bundle: session_id
+action: page_not_found
+no_bypass: false
+bypass_message: false
+configuration: {  }

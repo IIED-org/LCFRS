@@ -11,7 +11,7 @@ field_name: field_update_type
 entity_type: node
 bundle: update
 label: 'Update type'
-description: ''
+description: '<b>For articles you will need to update the Rabbit Hole settings to Display the page</b>'
 required: true
 translatable: false
 default_value: {  }

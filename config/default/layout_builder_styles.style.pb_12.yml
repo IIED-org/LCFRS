@@ -1,0 +1,21 @@
+uuid: 24a6f29d-4744-4942-9c76-c88d4016a7a2
+langcode: en
+status: true
+dependencies: {  }
+id: pb_12
+label: pb-12
+classes: pb-12
+type: component
+group: spacing
+block_restrictions:
+  - 'views_block:latest-latest'
+  - 'views_block:updates-block_2'
+  - 'views_block:partners-block_2'
+  - 'views_block:partners-block_3'
+  - 'views_block:partners-block_1'
+  - 'views_block:events-all'
+  - 'views_block:speakers-block_2'
+  - 'views_block:speakers-block_1'
+  - 'views_block:updates-block_1'
+layout_restrictions: {  }
+weight: 0

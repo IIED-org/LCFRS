@@ -151,7 +151,7 @@ display:
         options:
           query_comment: ''
           disable_sql_rewrite: false
-          distinct: false
+          distinct: true
           replica: false
           query_tags: {  }
       relationships: {  }
@@ -171,6 +171,22 @@ display:
     display_plugin: block
     position: 1
     display_options:
+      sorts:
+        weight:
+          id: weight
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
       style:
         type: grid_responsive
         options:
@@ -187,6 +203,7 @@ display:
       defaults:
         style: false
         row: false
+        sorts: false
       display_description: ''
       display_extenders: {  }
       block_description: 'Speakers page block'
