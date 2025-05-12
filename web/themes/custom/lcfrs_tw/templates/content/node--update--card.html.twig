@@ -74,8 +74,8 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
 </svg>' %}
   {% set link_section_content %}
-    <div class="flex items-center bg-fs-cyan-100 px-3 py-1">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 h-4 w-4">
+    <div class="flex items-center px-3 py-1 bg-fs-cyan-100">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 mr-2">
         <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
         <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
       </svg>
@@ -91,7 +91,7 @@
 </svg>' %}
   {% set link_section_html %}
     <div class="text-lg text-fs-violet-500">
-      <a href="{{ path('entity.node.canonical', {'node': node.id}) }}" class="flex items-center group no-underline text-inherit hover:fs-violet-400">
+      <a href="{{ path('entity.node.canonical', {'node': node.id}) }}" class="flex items-center no-underline group text-inherit hover:fs-violet-400">
         <span class="mr-1">Read full article</span>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 transform duration-150 ease-in group-hover:translate-x-0.5 block m-0 p-0">
           <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
@@ -111,7 +111,7 @@
   {% set link_section_html %}
     <div class="text-lg text-fs-violet-500">
       {% if external_link_url %}
-        <a href="{{ external_link_url }}" class="flex items-center group no-underline"> 
+        <a href="{{ external_link_url }}" class="flex items-center no-underline group"> 
           <span class="mr-1">{{ external_link_title }}</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 transform duration-150 ease-in group-hover:translate-x-0.5 block m-0 p-0">
             <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
@@ -131,13 +131,13 @@
     <span>{{ content.field_update_type }}</span>
   </div>
 
-  <div class="flex flex-1 flex-col p-4">
+  <div class="flex flex-col flex-1 p-4">
 
     <div class="mb-4 text-2xl font-semibold font-display text-neutral-900">{{ node.label }}</div>
     
-    <div class="mb-4 text-neutral-500">{{ node.published_at.value|date('F Y') }}</div>
+    <div class="mb-4 text-neutral-500">{{ node.created.value|date('j F Y') }}</div>
     
-    <div class="prose mb-4 flex-grow">
+    <div class="flex-grow mb-4 prose">
       <p> {{ content.field_description }}</p>
     </div>
 
