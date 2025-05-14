@@ -1,0 +1,32 @@
+uuid: b424575d-77f2-4e47-a514-3de5c0455148
+langcode: en
+status: true
+dependencies: {  }
+id: GTM-NT6G94ZB.682497df0ddfe5.14486505
+label: GTM-NT6G94ZB
+weight: 0
+tag_container_ids:
+  - GTM-NT6G94ZB
+advanced_settings:
+  consent_mode: false
+  gtm:
+    GTM-NT6G94ZB:
+      data_layer: dataLayer
+      include_classes: false
+      allowlist_classes: ''
+      blocklist_classes: ''
+      include_environment: false
+      environment_id: ''
+      environment_token: ''
+dimensions_metrics: {  }
+conditions: {  }
+events:
+  generate_lead:
+    value: ''
+    currency: ''
+  search: {  }
+  custom: {  }
+  login:
+    method: CMS
+  sign_up:
+    method: CMS
