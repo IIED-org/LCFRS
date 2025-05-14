@@ -1,0 +1,25 @@
+uuid: 8a03ff7e-ecab-4642-bec6-efc54e9f7029
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic_block:006d2f6f-816a-470f-a98c-b5f2738068bc'
+  module:
+    - block_content
+  theme:
+    - lcfrs_tw
+id: lcfrs_tw_footerblock
+theme: lcfrs_tw
+region: footer
+weight: -4
+provider: null
+plugin: 'block_content:006d2f6f-816a-470f-a98c-b5f2738068bc'
+settings:
+  id: 'block_content:006d2f6f-816a-470f-a98c-b5f2738068bc'
+  label: 'Footer block'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

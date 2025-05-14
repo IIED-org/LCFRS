@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_display.node.page.full
     - filter.format.content_format
     - filter.format.full_html
     - media.type.document
@@ -15,12 +16,14 @@ dependencies:
     - node.type.update
     - workflows.workflow.basic_editorial
   module:
+    - block
     - block_content
     - content_moderation
     - contextual
     - draggableviews
     - file
     - filter
+    - layout_builder
     - media
     - navigation
     - node
@@ -48,9 +51,14 @@ permissions:
   - 'access toolbar'
   - 'access trash'
   - 'administer block content'
+  - 'administer blocks'
   - 'administer menu'
   - 'administer redirects'
   - 'administer url aliases'
+  - 'configure all page node layout overrides'
+  - 'configure any layout'
+  - 'configure editable page node layout overrides'
+  - 'create and edit custom blocks'
   - 'create document media'
   - 'create event content'
   - 'create image media'
