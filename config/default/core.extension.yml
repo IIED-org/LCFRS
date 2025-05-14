@@ -44,6 +44,7 @@ module:
   eca_ui: 0
   eca_user: 0
   editor: 0
+  encrypt: 0
   entity_reference_revisions: 0
   field: 0
   field_ui: 0
@@ -64,6 +65,7 @@ module:
   inline_form_errors: 0
   jquery_ui: 0
   jquery_ui_resizable: 0
+  key: 0
   klaro: 0
   layout_builder: 0
   layout_builder_restrictions: 0
@@ -86,10 +88,15 @@ module:
   options: 0
   package_manager: 0
   page_cache: 0
+  password_policy_character_types: 0
+  password_policy_history: 0
+  password_policy_length: 0
+  password_policy_username: 0
   path: 0
   path_alias: 0
   project_browser: 0
   rabbit_hole: 0
+  real_aes: 0
   redirect: 0
   redirect_404: 0
   responsive_image: 0
@@ -105,6 +112,7 @@ module:
   taxonomy: 0
   telephone: 0
   text: 0
+  tfa: 0
   token: 0
   toolbar: 0
   trash: 0
@@ -115,6 +123,7 @@ module:
   workflows: 0
   eca_form: 1
   pathauto: 1
+  password_policy: 10
   views: 10
   paragraphs: 11
 theme:

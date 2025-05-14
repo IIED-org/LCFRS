@@ -14,6 +14,7 @@ dependencies:
     - media
     - node
     - system
+    - tfa
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
 id: authenticated
@@ -25,6 +26,7 @@ permissions:
   - 'access content'
   - 'bypass honeypot protection'
   - 'delete own files'
+  - 'setup own tfa'
   - 'skip CAPTCHA'
   - 'use klaro'
   - 'view media'
