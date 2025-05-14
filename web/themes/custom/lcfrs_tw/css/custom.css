@@ -7,3 +7,6 @@ a.button-top:hover {
   #btnSubmit {
     color: #fff !important;
   }
+q {
+  quotes: none;
+}
