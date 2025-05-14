@@ -5,7 +5,8 @@ dependencies: {  }
 id: contact
 label: Contact
 recipients:
-  - Webmaster@iied.org
+  - LCRFSummit@iied.org
+  - webmaster@iied.org
 reply: ''
 weight: 0
 message: ''
