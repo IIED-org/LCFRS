@@ -14,10 +14,19 @@ dependencies:
     - node.type.page
     - node.type.resource
     - node.type.update
+    - taxonomy.vocabulary.partner_type
+    - taxonomy.vocabulary.partners
+    - taxonomy.vocabulary.room
+    - taxonomy.vocabulary.session_id
+    - taxonomy.vocabulary.session_type
+    - taxonomy.vocabulary.speakers
+    - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.update_type
     - workflows.workflow.basic_editorial
   module:
     - block
     - block_content
+    - contact
     - content_moderation
     - contextual
     - draggableviews
@@ -27,10 +36,12 @@ dependencies:
     - media
     - navigation
     - node
+    - paragraphs
     - path
     - rabbit_hole
     - redirect
     - scheduler
+    - smart_date
     - system
     - taxonomy
     - toolbar
@@ -48,12 +59,19 @@ permissions:
   - 'access draggableviews'
   - 'access media overview'
   - 'access navigation'
+  - 'access taxonomy overview'
   - 'access toolbar'
   - 'access trash'
   - 'administer block content'
   - 'administer blocks'
+  - 'administer contact forms'
+  - 'administer media'
   - 'administer menu'
+  - 'administer nodes'
+  - 'administer rabbit_hole settings'
   - 'administer redirects'
+  - 'administer smart date formats'
+  - 'administer taxonomy'
   - 'administer url aliases'
   - 'configure all page node layout overrides'
   - 'configure any layout'
@@ -62,12 +80,22 @@ permissions:
   - 'create document media'
   - 'create event content'
   - 'create image media'
+  - 'create media'
   - 'create page content'
   - 'create remote_video media'
   - 'create resource content'
   - 'create svg_image media'
+  - 'create terms in partner_type'
+  - 'create terms in partners'
+  - 'create terms in room'
+  - 'create terms in session_id'
+  - 'create terms in session_type'
+  - 'create terms in speakers'
+  - 'create terms in tags'
+  - 'create terms in update_type'
   - 'create update content'
   - 'create url aliases'
+  - 'delete all taxonomy revisions'
   - 'delete any document media'
   - 'delete any event content'
   - 'delete any image media'
@@ -77,12 +105,32 @@ permissions:
   - 'delete any svg_image media'
   - 'delete any update content'
   - 'delete event revisions'
+  - 'delete own document media'
   - 'delete own event content'
   - 'delete own files'
+  - 'delete own image media'
   - 'delete own page content'
+  - 'delete own remote_video media'
   - 'delete own resource content'
+  - 'delete own svg_image media'
   - 'delete own update content'
   - 'delete page revisions'
+  - 'delete term revisions in partner_type'
+  - 'delete term revisions in partners'
+  - 'delete term revisions in room'
+  - 'delete term revisions in session_id'
+  - 'delete term revisions in session_type'
+  - 'delete term revisions in speakers'
+  - 'delete term revisions in tags'
+  - 'delete term revisions in update_type'
+  - 'delete terms in partner_type'
+  - 'delete terms in partners'
+  - 'delete terms in room'
+  - 'delete terms in session_id'
+  - 'delete terms in session_type'
+  - 'delete terms in speakers'
+  - 'delete terms in tags'
+  - 'delete terms in update_type'
   - 'edit any document media'
   - 'edit any event content'
   - 'edit any image media'
@@ -95,20 +143,56 @@ permissions:
   - 'edit own page content'
   - 'edit own resource content'
   - 'edit own update content'
+  - 'edit terms in partner_type'
+  - 'edit terms in partners'
+  - 'edit terms in room'
+  - 'edit terms in session_id'
+  - 'edit terms in session_type'
+  - 'edit terms in speakers'
+  - 'edit terms in tags'
+  - 'edit terms in update_type'
+  - 'rabbit hole administer node'
+  - 'rabbit hole administer taxonomy_term'
   - 'rabbit hole bypass node'
   - 'rabbit hole bypass taxonomy_term'
+  - 'restore node entities'
   - 'revert all revisions'
+  - 'revert all taxonomy revisions'
   - 'revert event revisions'
+  - 'revert term revisions in partner_type'
+  - 'revert term revisions in partners'
+  - 'revert term revisions in room'
+  - 'revert term revisions in session_id'
+  - 'revert term revisions in session_type'
+  - 'revert term revisions in speakers'
+  - 'revert term revisions in tags'
+  - 'revert term revisions in update_type'
   - 'schedule publishing of nodes'
+  - 'update any media'
+  - 'update media'
   - 'use basic_editorial transition create_new_draft'
   - 'use basic_editorial transition publish'
   - 'use basic_editorial transition unpublish'
   - 'use text format content_format'
   - 'use text format full_html'
+  - 'view all media revisions'
   - 'view all revisions'
+  - 'view all taxonomy revisions'
   - 'view any unpublished content'
+  - 'view deleted entities'
   - 'view event revisions'
+  - 'view latest version'
   - 'view own unpublished content'
   - 'view own unpublished media'
   - 'view scheduled content'
+  - 'view term revisions in partner_type'
+  - 'view term revisions in partners'
+  - 'view term revisions in room'
+  - 'view term revisions in session_id'
+  - 'view term revisions in session_type'
+  - 'view term revisions in speakers'
+  - 'view term revisions in tags'
+  - 'view term revisions in update_type'
   - 'view the administration theme'
+  - 'view unpublished paragraphs'
+  - 'view vocabulary labels'
