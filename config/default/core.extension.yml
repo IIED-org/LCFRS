@@ -85,6 +85,7 @@ module:
   menu_link_attributes: 0
   menu_link_content: 0
   menu_ui: 0
+  metatag: 0
   mysql: 0
   navigation: 0
   node: 0
@@ -106,6 +107,8 @@ module:
   sam: 0
   scheduler: 0
   scheduler_content_moderation_integration: 0
+  simple_sitemap: 0
+  simple_sitemap_engines: 0
   smart_date: 0
   stage_file_proxy: 0
   svg_image: 0

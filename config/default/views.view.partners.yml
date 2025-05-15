@@ -285,7 +285,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 6
+          items_per_page: 7
       filters:
         status:
           id: status
@@ -361,8 +361,8 @@ display:
         type: grid_responsive
         options:
           uses_fields: false
-          columns: 6
-          cell_min_width: 220
+          columns: 7
+          cell_min_width: 180
           grid_gutter: 30
           alignment: horizontal
       row:
