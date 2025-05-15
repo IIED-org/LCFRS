@@ -43,6 +43,7 @@
         "drupal/layout_builder_styles": "^2.1",
         "drupal/paragraphs": "^1.19",
         "drupal/password_policy": "^4.0",
+        "drupal/password_policy_extras": "^4.0",
         "drupal/project_browser": "@beta",
         "drupal/rabbit_hole": "^2.0@beta",
         "drupal/real_aes": "^2.6",
