@@ -1,0 +1,13 @@
+uuid: 77c9a440-a067-4d3a-8baa-f6acf59e6573
+langcode: en
+status: true
+dependencies: {  }
+id: pb_24
+label: pb-24
+classes: pb-24
+type: section
+group: spacing
+block_restrictions: {  }
+layout_restrictions:
+  - layout_onecol
+weight: 0
