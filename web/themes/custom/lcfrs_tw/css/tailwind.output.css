@@ -1455,6 +1455,9 @@
   .text-\[15px\] {
     font-size: 15px;
   }
+  .text-\[34px\] {
+    font-size: 34px;
+  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
@@ -2180,6 +2183,11 @@
     @media (width >= 64rem) {
       font-size: var(--text-xl);
       line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+  }
+  .lg\:text-\[34px\] {
+    @media (width >= 64rem) {
+      font-size: 34px;
     }
   }
   .xl\:ml-6 {
