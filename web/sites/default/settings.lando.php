@@ -153,6 +153,7 @@ ini_set('display_startup_errors', TRUE);
  */
 
 $config['stage_file_proxy.settings']['origin']  = 'https://www.climateresilience.finance';
+$config['stage_file_proxy.settings']['use_imagecache_root']  = TRUE;
 
 /**
  * Use "local" config split for development
