@@ -152,9 +152,7 @@ ini_set('display_startup_errors', TRUE);
  * domain (usually production, sometimes development) with the images.
  */
 
- // Remove the following line and uncomment the one after the site goes live
-//$config['stage_file_proxy.settings']['origin']  = 'https://dev.lcrfs.iied.org';
-//$config['stage_file_proxy.settings']['origin']  = 'https://www.climateresilience.finance';
+$config['stage_file_proxy.settings']['origin']  = 'https://www.climateresilience.finance';
 
 /**
  * Use "local" config split for development
