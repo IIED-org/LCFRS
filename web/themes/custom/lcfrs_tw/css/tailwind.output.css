@@ -1674,6 +1674,11 @@
       line-height: var(--tw-leading, var(--text-4xl--line-height));
     }
   }
+  .md\:text-\[34px\] {
+    @media (width >= 48rem) {
+      font-size: 34px;
+    }
+  }
   .lg\:order-first {
     @media (width >= 64rem) {
       order: -9999;
