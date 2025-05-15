@@ -19,7 +19,8 @@
     'mx-auto',
     'container',
     'px-4',
-    'py-24',
+    'pt-16',
+    'pb-24',
     'text-white',
     'flex',
     'flex-wrap',
@@ -32,4 +33,5 @@
   <div{{ attributes.addClass(classes) }}>
     {{ content }}
   </div>
+ <div class="container px-4 pb-6 mx-auto text-white">© {{ 'now' | date('Y') }} International Institute for Environment and Development (IIED)</div>
 {% endif %}
