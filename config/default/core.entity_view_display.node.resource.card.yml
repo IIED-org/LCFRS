@@ -4,8 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.card
+    - field.field.node.resource.field_content_paragraphs
     - field.field.node.resource.field_description
-    - field.field.node.resource.field_featured_image
     - field.field.node.resource.rabbit_hole__settings
     - node.type.resource
   module:
@@ -28,5 +28,5 @@ content:
     weight: 100
     region: content
 hidden:
-  field_featured_image: true
+  field_content_paragraphs: true
   rabbit_hole__settings: true

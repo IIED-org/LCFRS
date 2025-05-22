@@ -7,13 +7,14 @@ dependencies:
 _core:
   default_config_hash: BMe4Vni3BU_d489RQNq3XMv5lQgbFRfiWD93_A7sTeE
 id: events
-label: Events
+label: Sessions
 type: 'canonical_entities:node'
-pattern: '/events/[node:title]'
+pattern: '/session/[node:title]'
 selection_criteria:
-  177cfc00-f45f-4166-a3e7-0e9a94ac539c:
+  84370606-92ba-4547-9c7b-31c93f290347:
     id: 'entity_bundle:node'
     negate: false
+    uuid: 84370606-92ba-4547-9c7b-31c93f290347
     context_mapping:
       node: node
     bundles:

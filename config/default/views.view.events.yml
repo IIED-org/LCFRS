@@ -5,10 +5,14 @@ dependencies:
   config:
     - core.entity_view_mode.node.card
     - node.type.event
+    - taxonomy.vocabulary.session_id
+  content:
+    - 'taxonomy_term:session_id:a394c1a2-cf54-49f3-9e02-cec609b1e549'
   module:
     - better_exposed_filters
     - node
     - smart_date
+    - taxonomy
     - user
 _core:
   default_config_hash: TRC6sks8KGoP68yNPh2be314QbViaIB2JCRNQjvHwXE
@@ -306,9 +310,1055 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
+  a_1:
+    id: a_1
+    display_title: 'Attachment 10:00-11:00'
+    display_plugin: attachment
+    position: 2
+    display_options:
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            event: event
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_event__date_value:
+          id: field_event__date_value
+          table: node__field_event__date
+          field: field_event__date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: date
+          operator: '='
+          value:
+            min: '2025-06-27 09:45:00'
+            max: '2025-06-27 11:15:00'
+            value: '2025-06-27 10:00:00'
+            type: date
+            granularity: minute
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: grid_responsive
+        options:
+          uses_fields: false
+          columns: 5
+          cell_min_width: 260
+          grid_gutter: 20
+          alignment: horizontal
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: card
+      defaults:
+        style: false
+        row: false
+        filters: false
+        filter_groups: false
+        header: false
+        footer: false
+      display_description: ''
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: 'Time 10:00'
+          plugin_id: text_custom
+          empty: false
+          content: "<div class=\"flex items-center my-4 lg:my-0\">\r\n    <div class=\"w-16 text-lg font-bold text-fs-violet-500\">10:00</div>\r\n    <div class=\"flex-1 border border-fs-cyan-200 max-lg:hidden\"></div>\r\n</div>"
+          tokenize: false
+      footer:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: 'Time 11:00'
+          plugin_id: text_custom
+          empty: false
+          content: "<div class=\"flex items-center my-4 lg:my-0\">\r\n    <div class=\"w-16 text-lg font-bold text-fs-violet-500\">11:00</div>\r\n    <div class=\"flex-1 border border-fs-cyan-200 max-lg:hidden\"></div>\r\n</div>"
+          tokenize: false
+        area_text_custom_1:
+          id: area_text_custom_1
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: 'Coffee break (Foyer)'
+          plugin_id: text_custom
+          empty: false
+          content: '<div class="p-4 font-bold bg-fs-cyan-200 md:col-span-5 lg:ml-20">Coffee break (Foyer)</div>'
+          tokenize: false
+      display_extenders: {  }
+      displays:
+        all: all
+      attachment_position: after
+      inherit_exposed_filters: true
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  a_2:
+    id: a_2
+    display_title: Riverside
+    display_plugin: attachment
+    position: 3
+    display_options:
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            event: event
+          group: 1
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_session_id_target_id:
+          id: field_session_id_target_id
+          table: node__field_session_id
+          field: field_session_id_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            - 57
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: session_id
+          type: textfield
+          hierarchy: false
+          limit: true
+          error_message: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: grid_responsive
+        options:
+          uses_fields: false
+          columns: 1
+          cell_min_width: 260
+          grid_gutter: 20
+          alignment: horizontal
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: card
+      defaults:
+        css_class: false
+        style: false
+        row: false
+        filters: false
+        filter_groups: false
+        header: false
+        footer: false
+      css_class: riverside
+      display_description: ''
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: 'Time 11:00'
+          plugin_id: text_custom
+          empty: false
+          content: '<div class="w-16 text-lg font-bold text-fs-violet-500">11:00</div>'
+          tokenize: false
+      footer:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: 'Time 12:00'
+          plugin_id: text
+          empty: false
+          content:
+            value: '<div class="w-16 text-lg font-bold text-fs-violet-500">12:00</div>'
+            format: full_html
+          tokenize: false
+      display_extenders: {  }
+      displays:
+        all: all
+      attachment_position: after
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  a_3:
+    id: a_3
+    display_title: 'Attachment 11:30-13:00'
+    display_plugin: attachment
+    position: 4
+    display_options:
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            event: event
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_event__date_value:
+          id: field_event__date_value
+          table: node__field_event__date
+          field: field_event__date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: date
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: '2025-06-27 11:30:00'
+            type: date
+            granularity: minute
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: grid_responsive
+        options:
+          uses_fields: false
+          columns: 5
+          cell_min_width: 260
+          grid_gutter: 20
+          alignment: horizontal
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: card
+      defaults:
+        style: false
+        row: false
+        filters: false
+        filter_groups: false
+        header: false
+      display_description: ''
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: 'Time 11:30'
+          plugin_id: text_custom
+          empty: false
+          content: "<div class=\"flex items-center my-4 lg:my-0\">\r\n    <div class=\"w-16 text-lg font-bold text-fs-violet-500\">11:30</div>\r\n    <div class=\"flex-1 border border-fs-cyan-200 max-lg:hidden\"></div>\r\n</div>\r\n"
+          tokenize: false
+      display_extenders: {  }
+      displays:
+        all: all
+      attachment_position: after
+      inherit_exposed_filters: true
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  a_4:
+    id: a_4
+    display_title: 'Attachment 14:00-15:30'
+    display_plugin: attachment
+    position: 5
+    display_options:
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            event: event
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_event__date_value:
+          id: field_event__date_value
+          table: node__field_event__date
+          field: field_event__date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: date
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: '2025-06-27 14:00:00'
+            type: date
+            granularity: minute
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: grid_responsive
+        options:
+          uses_fields: false
+          columns: 5
+          cell_min_width: 260
+          grid_gutter: 20
+          alignment: horizontal
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: card
+      defaults:
+        style: false
+        row: false
+        filters: false
+        filter_groups: false
+        header: false
+      display_description: ''
+      header:
+        area_text_custom_1:
+          id: area_text_custom_1
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: 'Time 13:00'
+          plugin_id: text_custom
+          empty: false
+          content: "<div class=\"flex items-center my-4 lg:my-0\">\r\n    <div class=\"w-16 text-lg font-bold text-fs-violet-500\">13:00</div>\r\n    <div class=\"flex-1 border border-fs-cyan-200 max-lg:hidden\"></div>\r\n</div>\r\n"
+          tokenize: false
+        area_text_custom_2:
+          id: area_text_custom_2
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: Lunch
+          plugin_id: text_custom
+          empty: false
+          content: '<div class="p-4 font-bold bg-fs-cyan-200 md:col-span-5 lg:ml-20">Lunch (River room)</div>'
+          tokenize: false
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: 'Time 14:00'
+          plugin_id: text_custom
+          empty: false
+          content: "<div class=\"flex items-center my-4 lg:my-0\">\r\n    <div class=\"w-16 text-lg font-bold text-fs-violet-500\">14:00</div>\r\n    <div class=\"flex-1 border border-fs-cyan-200 max-lg:hidden\"></div>\r\n</div>\r\n"
+          tokenize: false
+      display_extenders: {  }
+      displays:
+        all: all
+      attachment_position: after
+      inherit_exposed_filters: true
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  a_5:
+    id: a_5
+    display_title: 'Attachment 16:00-16:30'
+    display_plugin: attachment
+    position: 6
+    display_options:
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            event: event
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_event__date_value:
+          id: field_event__date_value
+          table: node__field_event__date
+          field: field_event__date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: date
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: '2025-06-27 16:00:00'
+            type: date
+            granularity: minute
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: grid_responsive
+        options:
+          uses_fields: false
+          columns: 1
+          cell_min_width: 260
+          grid_gutter: 20
+          alignment: horizontal
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: card
+      defaults:
+        style: false
+        row: false
+        filters: false
+        filter_groups: false
+        header: false
+      display_description: ''
+      header:
+        area_text_custom_1:
+          id: area_text_custom_1
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: 'Time 15:30'
+          plugin_id: text_custom
+          empty: false
+          content: "<div class=\"flex items-center my-4 lg:my-0\">\r\n    <div class=\"w-16 text-lg font-bold text-fs-violet-500\">15:30</div>\r\n    <div class=\"flex-1 border border-fs-cyan-200 max-lg:hidden\"></div>\r\n</div>"
+          tokenize: false
+        area_text_custom_2:
+          id: area_text_custom_2
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: 'Coffee break (River room)'
+          plugin_id: text_custom
+          empty: false
+          content: '<div class="p-4 font-bold bg-fs-cyan-200 md:col-span-5 lg:ml-20">Coffee break (River room)</div>'
+          tokenize: false
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: 'Time 16:00'
+          plugin_id: text_custom
+          empty: false
+          content: "<div class=\"flex items-center my-4 lg:my-0\">\r\n    <div class=\"w-16 text-lg font-bold text-fs-violet-500\">16:00</div>\r\n    <div class=\"flex-1 border border-fs-cyan-200 max-lg:hidden\"></div>\r\n</div>"
+          tokenize: false
+      display_extenders: {  }
+      displays:
+        all: all
+      attachment_position: after
+      inherit_exposed_filters: true
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  a_6:
+    id: a_6
+    display_title: 'Attachment 16:30-17:30'
+    display_plugin: attachment
+    position: 7
+    display_options:
+      empty: {  }
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            event: event
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_event__date_value:
+          id: field_event__date_value
+          table: node__field_event__date
+          field: field_event__date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: date
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: '2025-06-27 16:30:00'
+            type: date
+            granularity: minute
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: grid_responsive
+        options:
+          uses_fields: false
+          columns: 1
+          cell_min_width: 260
+          grid_gutter: 20
+          alignment: horizontal
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: card
+      defaults:
+        empty: false
+        style: false
+        row: false
+        filters: false
+        filter_groups: false
+        header: false
+        footer: false
+      display_description: ''
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: 'Time 16:30'
+          plugin_id: text_custom
+          empty: false
+          content: "<div class=\"flex items-center my-4 lg:my-0\">\r\n    <div class=\"w-16 text-lg font-bold text-fs-violet-500\">16:30</div>\r\n    <div class=\"flex-1 border border-fs-cyan-200 max-lg:hidden\"></div>\r\n</div>"
+          tokenize: false
+      footer:
+        area_text_custom_1:
+          id: area_text_custom_1
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: 'Time 17:30'
+          plugin_id: text_custom
+          empty: false
+          content: "<div class=\"flex items-center my-4 lg:my-0\">\r\n    <div class=\"w-16 text-lg font-bold text-fs-violet-500\">17:30</div>\r\n    <div class=\"flex-1 border border-fs-cyan-200 max-lg:hidden\"></div>\r\n</div>\r\n"
+          tokenize: false
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: 'Evening reception'
+          plugin_id: text_custom
+          empty: false
+          content: '<div class="p-4 font-bold bg-fs-cyan-200 md:col-span-5 lg:ml-20">Evening reception (River room)</div>'
+          tokenize: false
+        area_text_custom_2:
+          id: area_text_custom_2
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: 'Time 19:30'
+          plugin_id: text_custom
+          empty: false
+          content: "<div class=\"flex items-center my-4 lg:my-0\">\r\n    <div class=\"w-16 text-lg font-bold text-fs-violet-500\">19:30</div>\r\n    <div class=\"flex-1 border border-fs-cyan-200 max-lg:hidden\"></div>\r\n</div>\r\n"
+          tokenize: false
+      display_extenders: {  }
+      displays:
+        all: all
+      attachment_position: after
+      inherit_exposed_filters: true
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
   all:
     id: all
-    display_title: 'Sessions 9:00-9:45'
+    display_title: 'Sessions 9:00-10:00'
     display_plugin: block
     position: 1
     display_options:
@@ -462,7 +1512,7 @@ display:
           admin_label: 'Check in'
           plugin_id: text_custom
           empty: false
-          content: '<div class="p-4 font-bold bg-fs-cyan-200 md:col-span-5 lg:ml-20">Registration</div>'
+          content: '<div class="p-4 font-bold bg-fs-cyan-200 md:col-span-5 lg:ml-20">Registration (Foyer)</div>'
           tokenize: false
         area_text_custom:
           id: area_text_custom
@@ -477,879 +1527,6 @@ display:
           tokenize: false
       display_extenders: {  }
       block_description: 'Programme page block'
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  attachment_1:
-    id: attachment_1
-    display_title: 'Attachment 10:00-11:30'
-    display_plugin: attachment
-    position: 2
-    display_options:
-      filters:
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          value:
-            event: event
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-        status:
-          id: status
-          table: node_field_data
-          field: status
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: status
-          plugin_id: boolean
-          operator: '='
-          value: '1'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-        field_event__date_value:
-          id: field_event__date_value
-          table: node__field_event__date
-          field: field_event__date_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: date
-          operator: '='
-          value:
-            min: '2025-06-27 09:45:00'
-            max: '2025-06-27 11:15:00'
-            value: '2025-06-27 10:00:00'
-            type: date
-            granularity: minute
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            min_placeholder: ''
-            max_placeholder: ''
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      style:
-        type: grid_responsive
-        options:
-          uses_fields: false
-          columns: 5
-          cell_min_width: 260
-          grid_gutter: 20
-          alignment: horizontal
-      row:
-        type: 'entity:node'
-        options:
-          relationship: none
-          view_mode: card
-      defaults:
-        style: false
-        row: false
-        filters: false
-        filter_groups: false
-        header: false
-      display_description: ''
-      header:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: 'Time 10:00'
-          plugin_id: text_custom
-          empty: false
-          content: "<div class=\"flex items-center my-4 lg:my-0\">\r\n    <div class=\"w-16 text-lg font-bold text-fs-violet-500\">10:00</div>\r\n    <div class=\"flex-1 border border-fs-cyan-200 max-lg:hidden\"></div>\r\n</div>"
-          tokenize: false
-      display_extenders: {  }
-      displays:
-        all: all
-      attachment_position: after
-      inherit_exposed_filters: true
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  attachment_2:
-    id: attachment_2
-    display_title: 'Attachment 11:45-13:15'
-    display_plugin: attachment
-    position: 2
-    display_options:
-      filters:
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          value:
-            event: event
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-        status:
-          id: status
-          table: node_field_data
-          field: status
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: status
-          plugin_id: boolean
-          operator: '='
-          value: '1'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-        field_event__date_value:
-          id: field_event__date_value
-          table: node__field_event__date
-          field: field_event__date_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: date
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: '2025-06-27 11:45:00'
-            type: date
-            granularity: minute
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            min_placeholder: ''
-            max_placeholder: ''
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      style:
-        type: grid_responsive
-        options:
-          uses_fields: false
-          columns: 5
-          cell_min_width: 260
-          grid_gutter: 20
-          alignment: horizontal
-      row:
-        type: 'entity:node'
-        options:
-          relationship: none
-          view_mode: card
-      defaults:
-        style: false
-        row: false
-        filters: false
-        filter_groups: false
-        header: false
-      display_description: ''
-      header:
-        area_text_custom_2:
-          id: area_text_custom_2
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: 'Time 11:30'
-          plugin_id: text_custom
-          empty: false
-          content: "<div class=\"flex items-center my-4 lg:my-0\">\r\n    <div class=\"w-16 text-lg font-bold text-fs-violet-500\">11:30</div>\r\n    <div class=\"flex-1 border border-fs-cyan-200 max-lg:hidden\"></div>\r\n</div>"
-          tokenize: false
-        area_text_custom_1:
-          id: area_text_custom_1
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: 'Tea break'
-          plugin_id: text_custom
-          empty: false
-          content: '<div class="p-4 font-bold bg-fs-cyan-200 md:col-span-5 lg:ml-20">Tea break</div>'
-          tokenize: false
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: 'Time 11:45'
-          plugin_id: text_custom
-          empty: false
-          content: "<div class=\"flex items-center my-4 lg:my-0\">\r\n    <div class=\"w-16 text-lg font-bold text-fs-violet-500\">11:45</div>\r\n    <div class=\"flex-1 border border-fs-cyan-200 max-lg:hidden\"></div>\r\n</div>\r\n"
-          tokenize: false
-      display_extenders: {  }
-      displays:
-        all: all
-      attachment_position: after
-      inherit_exposed_filters: true
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  attachment_3:
-    id: attachment_3
-    display_title: 'Attachment 14:15-15:45'
-    display_plugin: attachment
-    position: 2
-    display_options:
-      filters:
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          value:
-            event: event
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-        status:
-          id: status
-          table: node_field_data
-          field: status
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: status
-          plugin_id: boolean
-          operator: '='
-          value: '1'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-        field_event__date_value:
-          id: field_event__date_value
-          table: node__field_event__date
-          field: field_event__date_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: date
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: '2025-06-27 14:15:00'
-            type: date
-            granularity: minute
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            min_placeholder: ''
-            max_placeholder: ''
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      style:
-        type: grid_responsive
-        options:
-          uses_fields: false
-          columns: 5
-          cell_min_width: 260
-          grid_gutter: 20
-          alignment: horizontal
-      row:
-        type: 'entity:node'
-        options:
-          relationship: none
-          view_mode: card
-      defaults:
-        style: false
-        row: false
-        filters: false
-        filter_groups: false
-        header: false
-      display_description: ''
-      header:
-        area_text_custom_1:
-          id: area_text_custom_1
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: 'Time 13:15'
-          plugin_id: text_custom
-          empty: false
-          content: "<div class=\"flex items-center my-4 lg:my-0\">\r\n    <div class=\"w-16 text-lg font-bold text-fs-violet-500\">13:15</div>\r\n    <div class=\"flex-1 border border-fs-cyan-200 max-lg:hidden\"></div>\r\n</div>\r\n"
-          tokenize: false
-        area_text_custom_2:
-          id: area_text_custom_2
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: 'Lunch break'
-          plugin_id: text_custom
-          empty: false
-          content: '<div class="p-4 font-bold bg-fs-cyan-200 md:col-span-5 lg:ml-20">Lunch break</div>'
-          tokenize: false
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: 'Time 14:15'
-          plugin_id: text_custom
-          empty: false
-          content: "<div class=\"flex items-center my-4 lg:my-0\">\r\n    <div class=\"w-16 text-lg font-bold text-fs-violet-500\">14:15</div>\r\n    <div class=\"flex-1 border border-fs-cyan-200 max-lg:hidden\"></div>\r\n</div>\r\n"
-          tokenize: false
-      display_extenders: {  }
-      displays:
-        all: all
-      attachment_position: after
-      inherit_exposed_filters: true
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  attachment_4:
-    id: attachment_4
-    display_title: 'Attachment 16:15-16:45'
-    display_plugin: attachment
-    position: 2
-    display_options:
-      filters:
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          value:
-            event: event
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-        status:
-          id: status
-          table: node_field_data
-          field: status
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: status
-          plugin_id: boolean
-          operator: '='
-          value: '1'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-        field_event__date_value:
-          id: field_event__date_value
-          table: node__field_event__date
-          field: field_event__date_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: date
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: '2025-06-27 16:15:00'
-            type: date
-            granularity: minute
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            min_placeholder: ''
-            max_placeholder: ''
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      style:
-        type: grid_responsive
-        options:
-          uses_fields: false
-          columns: 1
-          cell_min_width: 260
-          grid_gutter: 20
-          alignment: horizontal
-      row:
-        type: 'entity:node'
-        options:
-          relationship: none
-          view_mode: card
-      defaults:
-        style: false
-        row: false
-        filters: false
-        filter_groups: false
-        header: false
-      display_description: ''
-      header:
-        area_text_custom_1:
-          id: area_text_custom_1
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: 'Time 15:45'
-          plugin_id: text_custom
-          empty: false
-          content: "<div class=\"flex items-center my-4 lg:my-0\">\r\n    <div class=\"w-16 text-lg font-bold text-fs-violet-500\">15:45</div>\r\n    <div class=\"flex-1 border border-fs-cyan-200 max-lg:hidden\"></div>\r\n</div>"
-          tokenize: false
-        area_text_custom_2:
-          id: area_text_custom_2
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: 'Tea break'
-          plugin_id: text_custom
-          empty: false
-          content: '<div class="p-4 font-bold bg-fs-cyan-200 md:col-span-5 lg:ml-20">Tea break</div>'
-          tokenize: false
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: 'Time 16:15'
-          plugin_id: text_custom
-          empty: false
-          content: "<div class=\"flex items-center my-4 lg:my-0\">\r\n    <div class=\"w-16 text-lg font-bold text-fs-violet-500\">16:15</div>\r\n    <div class=\"flex-1 border border-fs-cyan-200 max-lg:hidden\"></div>\r\n</div>"
-          tokenize: false
-      display_extenders: {  }
-      displays:
-        all: all
-      attachment_position: after
-      inherit_exposed_filters: true
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  attachment_5:
-    id: attachment_5
-    display_title: 'Attachment 16:45-17:30'
-    display_plugin: attachment
-    position: 2
-    display_options:
-      empty: {  }
-      filters:
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          value:
-            event: event
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-        status:
-          id: status
-          table: node_field_data
-          field: status
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: status
-          plugin_id: boolean
-          operator: '='
-          value: '1'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-        field_event__date_value:
-          id: field_event__date_value
-          table: node__field_event__date
-          field: field_event__date_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: date
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: '2025-06-27 16:45:00'
-            type: date
-            granularity: minute
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            min_placeholder: ''
-            max_placeholder: ''
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      style:
-        type: grid_responsive
-        options:
-          uses_fields: false
-          columns: 1
-          cell_min_width: 260
-          grid_gutter: 20
-          alignment: horizontal
-      row:
-        type: 'entity:node'
-        options:
-          relationship: none
-          view_mode: card
-      defaults:
-        empty: false
-        style: false
-        row: false
-        filters: false
-        filter_groups: false
-        header: false
-        footer: false
-      display_description: ''
-      header:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: 'Time 16:45'
-          plugin_id: text_custom
-          empty: false
-          content: "<div class=\"flex items-center my-4 lg:my-0\">\r\n    <div class=\"w-16 text-lg font-bold text-fs-violet-500\">16:45</div>\r\n    <div class=\"flex-1 border border-fs-cyan-200 max-lg:hidden\"></div>\r\n</div>"
-          tokenize: false
-      footer:
-        area_text_custom_1:
-          id: area_text_custom_1
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: 'Time 17:30'
-          plugin_id: text_custom
-          empty: false
-          content: "<div class=\"flex items-center my-4 lg:my-0\">\r\n    <div class=\"w-16 text-lg font-bold text-fs-violet-500\">17:30</div>\r\n    <div class=\"flex-1 border border-fs-cyan-200 max-lg:hidden\"></div>\r\n</div>\r\n"
-          tokenize: false
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: Reception
-          plugin_id: text_custom
-          empty: false
-          content: '<div class="p-4 font-bold bg-fs-cyan-200 md:col-span-5 lg:ml-20">Evening reception</div>'
-          tokenize: false
-        area_text_custom_2:
-          id: area_text_custom_2
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: 'Time 19:00'
-          plugin_id: text_custom
-          empty: false
-          content: "<div class=\"flex items-center my-4 lg:my-0\">\r\n    <div class=\"w-16 text-lg font-bold text-fs-violet-500\">19:00</div>\r\n    <div class=\"flex-1 border border-fs-cyan-200 max-lg:hidden\"></div>\r\n</div>\r\n"
-          tokenize: false
-      display_extenders: {  }
-      displays:
-        all: all
-      attachment_position: after
-      inherit_exposed_filters: true
     cache_metadata:
       max-age: -1
       contexts:
