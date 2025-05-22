@@ -58,14 +58,14 @@
       x-data="{ openAccordion: null }"
       class="w-full overflow-hidden">
       <div>
-        <button type="button" class="flex items-center justify-between w-full p-4 text-2xl font-headline" @click="openAccordion === '{{ item_id }}' ? openAccordion = null : openAccordion = '{{ item_id }}'" :aria-expanded="openAccordion === '{{ item_id }}'" aria-controls="{{ item_id }}">
+        <button type="button" class="flex items-center justify-between w-full py-4 text-2xl text-left font-headline" @click="openAccordion === '{{ item_id }}' ? openAccordion = null : openAccordion = '{{ item_id }}'" :aria-expanded="openAccordion === '{{ item_id }}'" aria-controls="{{ item_id }}">
           {{ content.field_accordion_item }}
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke="currentColor" class="w-6 h-6 transition-transform" :class="openAccordion === '{{ item_id }}' ? 'rotate-180' : ''">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke="currentColor" class="w-6 h-6 transition-transform shrink-0" :class="openAccordion === '{{ item_id }}' ? 'rotate-180' : ''">
             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
           </svg>
         </button>
 
-        <div x-cloak x-show="openAccordion === '{{ item_id }}'" id="{{ item_id }}" class="px-4" x-collapse>
+        <div x-cloak x-show="openAccordion === '{{ item_id }}'" id="{{ item_id }}" class="pr-4 text-left" x-collapse>
           {{ content.field_accordion_content }}
         </div>
       </div>

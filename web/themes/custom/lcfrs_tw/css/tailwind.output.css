@@ -952,6 +952,9 @@
   .mr-4 {
     margin-right: calc(var(--spacing) * 4);
   }
+  .\!mb-0 {
+    margin-bottom: calc(var(--spacing) * 0) !important;
+  }
   .mb-0 {
     margin-bottom: calc(var(--spacing) * 0);
   }
@@ -1401,11 +1404,17 @@
   .py-px {
     padding-block: 1px;
   }
+  .pt-6 {
+    padding-top: calc(var(--spacing) * 6);
+  }
   .pt-12 {
     padding-top: calc(var(--spacing) * 12);
   }
   .pt-16 {
     padding-top: calc(var(--spacing) * 16);
+  }
+  .pr-4 {
+    padding-right: calc(var(--spacing) * 4);
   }
   .pb-2 {
     padding-bottom: calc(var(--spacing) * 2);
@@ -1424,6 +1433,9 @@
   }
   .text-center {
     text-align: center;
+  }
+  .text-left {
+    text-align: left;
   }
   .font-display {
     font-family: var(--font-display);
@@ -1469,6 +1481,9 @@
   .font-thin {
     --tw-font-weight: var(--font-weight-thin);
     font-weight: var(--font-weight-thin);
+  }
+  .\!text-white {
+    color: var(--color-white) !important;
   }
   .text-fs-violet-500 {
     color: var(--color-fs-violet-500);
@@ -2464,6 +2479,43 @@ h2 .field--name-field-heading {
     outline-style: none;
   }
 }
+.button-secondary-cyan {
+  cursor: pointer;
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  border-color: var(--color-fs-violet-500);
+  padding: calc(var(--spacing) * 4);
+  text-align: center;
+  --tw-font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold);
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
+  --tw-ease: var(--ease-in-out);
+  transition-timing-function: var(--ease-in-out);
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-fs-green-100);
+    }
+  }
+  &:focus {
+    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  &:focus {
+    --tw-ring-color: var(--color-fs-violet-500);
+  }
+  &:focus {
+    --tw-ring-offset-width: 2px;
+    --tw-ring-offset-shadow: var(--tw-ring-inset,) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  }
+  &:focus {
+    --tw-outline-style: none;
+    outline-style: none;
+  }
+}
 .button-top {
   cursor: pointer;
   border-style: var(--tw-border-style);
@@ -2596,6 +2648,42 @@ h2 .field--name-field-heading {
 .wide-image img {
   width: 100%;
   object-fit: cover;
+}
+#user-login-form {
+  width: 100%;
+  @media (width >= 40rem) {
+    max-width: 40rem;
+  }
+  @media (width >= 48rem) {
+    max-width: 48rem;
+  }
+  @media (width >= 64rem) {
+    max-width: 64rem;
+  }
+  @media (width >= 80rem) {
+    max-width: 80rem;
+  }
+  @media (width >= 96rem) {
+    max-width: 96rem;
+  }
+  margin-inline: auto;
+  padding-inline: calc(var(--spacing) * 4);
+  padding-block: calc(var(--spacing) * 12);
+}
+.field--name-field-accordion-item {
+  flex-grow: 1;
+  padding-right: calc(var(--spacing) * 4);
+}
+.riverside {
+  margin-block: calc(var(--spacing) * 4);
+  background-color: var(--color-fs-green-100);
+  padding: calc(var(--spacing) * 4);
+  @media (width >= 64rem) {
+    margin-inline: calc(var(--spacing) * -4);
+  }
+}
+.riverside .session-card {
+  background-color: var(--color-white);
 }
 @layer base {
   [type='text'],input:where(:not([type])),[type='email'],[type='url'],[type='password'],[type='number'],[type='date'],[type='datetime-local'],[type='month'],[type='search'],[type='tel'],[type='time'],[type='week'],[multiple],textarea,select {
