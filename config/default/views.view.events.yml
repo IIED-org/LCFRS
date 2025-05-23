@@ -1330,7 +1330,7 @@ display:
           admin_label: 'Evening reception'
           plugin_id: text_custom
           empty: false
-          content: '<div class="p-4 font-bold bg-fs-cyan-200 md:col-span-5 lg:ml-20">Evening reception (River room)</div>'
+          content: '<div class="p-4 font-bold bg-fs-cyan-200 md:col-span-5 lg:ml-20">Evening networking reception (River room)</div>'
           tokenize: false
         area_text_custom_2:
           id: area_text_custom_2
@@ -1512,7 +1512,7 @@ display:
           admin_label: 'Check in'
           plugin_id: text_custom
           empty: false
-          content: '<div class="p-4 font-bold bg-fs-cyan-200 md:col-span-5 lg:ml-20">Registration (Foyer)</div>'
+          content: '<div class="p-4 font-bold bg-fs-cyan-200 md:col-span-5 lg:ml-20">Registration/check-in (Foyer)</div>'
           tokenize: false
         area_text_custom:
           id: area_text_custom
