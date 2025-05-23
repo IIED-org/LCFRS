@@ -31,7 +31,13 @@ Session full page
   <div{{ content_attributes.addClass('node__content prose prose-lg mx-auto') }}>
     <div class="mb-6"><a href="/programme">Programme</a> / <span class="text-neutral-500">{{ "session " }} {{ content.field_session_id.0 }}</span></div>
     <h1 class="mx-auto page-title max-w-prose">{{ node.label }}</h1>
-    <div class="flex gap-2 mb-6 font-bold">{{ content.field_event__date }} {{ " in " }} {{ content.field_room }}</div>
+
+    {% if content.field_room|render|striptags|trim is not empty %}
+      <div class="flex gap-2 mb-6 font-bold">{{ content.field_event__date }} {{ " in " }} {{ content.field_room }}</div>
+      {% else %}
+      <div class="mb-6 font-bold">{{ content.field_event__date }}</div>
+    {% endif %}
+
     <div class="px-4 py-px mb-6 bg-fs-violet-100">{{ content.field_notifications }}</div>
    
     {% set tags = node.field_tags is defined ? node.field_tags : [] %}
