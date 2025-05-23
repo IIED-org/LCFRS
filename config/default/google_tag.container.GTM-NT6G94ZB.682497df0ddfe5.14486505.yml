@@ -1,7 +1,10 @@
 uuid: b424575d-77f2-4e47-a514-3de5c0455148
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - system
+    - user
 id: GTM-NT6G94ZB.682497df0ddfe5.14486505
 label: GTM-NT6G94ZB
 weight: 0
@@ -19,14 +22,25 @@ advanced_settings:
       environment_id: ''
       environment_token: ''
 dimensions_metrics: {  }
-conditions: {  }
+conditions:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '/admin/*'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous
 events:
-  generate_lead:
-    value: ''
-    currency: ''
-  search: {  }
-  custom: {  }
   login:
     method: CMS
   sign_up:
     method: CMS
+  custom: {  }
+  generate_lead:
+    value: ''
+    currency: ''
+  search: {  }
