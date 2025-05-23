@@ -1,0 +1,51 @@
+uuid: a7360a51-bf39-4c75-bf45-562074cba32d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_paragraphs
+    - node.type.resource
+    - paragraphs.paragraphs_type.accordion
+    - paragraphs.paragraphs_type.embed
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.video
+  module:
+    - entity_reference_revisions
+id: node.resource.field_content_paragraphs
+field_name: field_content_paragraphs
+entity_type: node
+bundle: resource
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      accordion: accordion
+      text: text
+      image: image
+      video: video
+      embed: embed
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: -9
+        enabled: true
+      embed:
+        weight: 7
+        enabled: true
+      image:
+        weight: -7
+        enabled: true
+      text:
+        weight: -8
+        enabled: true
+      video:
+        weight: -6
+        enabled: true
+field_type: entity_reference_revisions

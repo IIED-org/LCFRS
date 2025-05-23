@@ -4,8 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.resource.field_content_paragraphs
     - field.field.node.resource.field_description
-    - field.field.node.resource.field_featured_image
     - field.field.node.resource.rabbit_hole__settings
     - node.type.resource
   module:
@@ -22,19 +22,11 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
-  field_featured_image:
-    type: entity_reference_entity_view
-    label: hidden
-    settings:
-      view_mode: small
-      link: false
-    third_party_settings: {  }
-    weight: 0
-    region: content
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 100
     region: content
 hidden:
+  field_content_paragraphs: true
   rabbit_hole__settings: true
