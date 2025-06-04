@@ -44,7 +44,17 @@ Session full page
 
     <div class="flex flex-wrap gap-2 mb-6">
       {% if node.field_session_type.0.entity.label is defined %}
-        <div class="px-2 rounded-full bg-fs-green-300">{{ node.field_session_type.0.entity.label }}</div>
+        {# <div class="px-2 rounded-full bg-fs-green-300">{{ node.field_session_type.0.entity.label }}</div> #}
+          {% set session_type_label = node.field_session_type.0.entity.label %}
+          <div class="px-2 rounded-full
+            {% if session_type_label == 'Challenge session' %}
+              bg-fs-red-300
+            {% else %}
+              bg-fs-green-300
+            {% endif %}
+          ">
+            {{ session_type_label }}
+          </div>
       {% endif %}
       
       {% for tag in tags %}
