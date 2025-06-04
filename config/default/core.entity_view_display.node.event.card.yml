@@ -85,6 +85,14 @@ content:
             fields__field_event__date__settings_edit_form__third_party_settings__date_augmenter__instances__augmenter_settings__active_tab: ''
     weight: 1
     region: content
+  field_partners:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
   field_room:
     type: entity_reference_label
     label: hidden
@@ -130,5 +138,4 @@ hidden:
   field_content: true
   field_content_paragraphs: true
   field_notifications: true
-  field_partners: true
   links: true
