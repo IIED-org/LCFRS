@@ -172,15 +172,13 @@ display:
     position: 1
     display_options:
       sorts:
-        weight:
-          id: weight
-          table: taxonomy_term_field_data
-          field: weight
+        field_last_name_value:
+          id: field_last_name_value
+          table: taxonomy_term__field_last_name
+          field: field_last_name_value
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: taxonomy_term
-          entity_field: weight
           plugin_id: standard
           order: ASC
           expose:
@@ -225,6 +223,22 @@ display:
         options:
           offset: 0
           items_per_page: 6
+      sorts:
+        weight:
+          id: weight
+          table: taxonomy_term_field_data
+          field: weight
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: taxonomy_term
+          entity_field: weight
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
       style:
         type: grid_responsive
         options:
@@ -242,6 +256,7 @@ display:
         pager: false
         style: false
         row: false
+        sorts: false
       display_description: ''
       display_extenders: {  }
       block_description: 'Speakers homepage block'

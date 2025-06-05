@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.vertical
+    - field.field.taxonomy_term.speakers.field_last_name
     - field.field.taxonomy_term.speakers.field_organisation
     - field.field.taxonomy_term.speakers.field_photo
     - field.field.taxonomy_term.speakers.field_role_or_job_title
@@ -47,5 +48,6 @@ content:
     region: content
 hidden:
   description: true
+  field_last_name: true
   field_sessions: true
   field_website: true
