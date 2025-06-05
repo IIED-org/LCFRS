@@ -772,7 +772,7 @@ display:
         type: grid_responsive
         options:
           uses_fields: false
-          columns: 5
+          columns: 4
           cell_min_width: 260
           grid_gutter: 20
           alignment: horizontal
@@ -815,7 +815,7 @@ display:
       tags: {  }
   a_4:
     id: a_4
-    display_title: 'Attachment 14:00-15:30'
+    display_title: 'Attachment 14:00-14:30'
     display_plugin: attachment
     position: 5
     display_options:
@@ -926,7 +926,7 @@ display:
         type: grid_responsive
         options:
           uses_fields: false
-          columns: 5
+          columns: 1
           cell_min_width: 260
           grid_gutter: 20
           alignment: horizontal
@@ -991,7 +991,7 @@ display:
       tags: {  }
   a_5:
     id: a_5
-    display_title: 'Attachment 16:00-16:30'
+    display_title: 'Attachment 14:30-16:00'
     display_plugin: attachment
     position: 6
     display_options:
@@ -1060,7 +1060,7 @@ display:
           value:
             min: ''
             max: ''
-            value: '2025-06-27 16:00:00'
+            value: '2025-06-27 14:30:00'
             type: date
             granularity: minute
           group: 1
@@ -1102,8 +1102,8 @@ display:
         type: grid_responsive
         options:
           uses_fields: false
-          columns: 1
-          cell_min_width: 260
+          columns: 6
+          cell_min_width: 220
           grid_gutter: 20
           alignment: horizontal
       row:
@@ -1119,38 +1119,16 @@ display:
         header: false
       display_description: ''
       header:
-        area_text_custom_1:
-          id: area_text_custom_1
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: 'Time 15:30'
-          plugin_id: text_custom
-          empty: false
-          content: "<div class=\"flex items-center my-4 lg:my-0\">\r\n    <div class=\"w-16 text-lg font-bold text-fs-violet-500\">15:30</div>\r\n    <div class=\"flex-1 border border-fs-cyan-200 max-lg:hidden\"></div>\r\n</div>"
-          tokenize: false
-        area_text_custom_2:
-          id: area_text_custom_2
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: 'Coffee break (River room)'
-          plugin_id: text_custom
-          empty: false
-          content: '<div class="p-4 font-bold bg-fs-cyan-200 md:col-span-5 lg:ml-20">Coffee break (River room)</div>'
-          tokenize: false
         area_text_custom:
           id: area_text_custom
           table: views
           field: area_text_custom
           relationship: none
           group_type: group
-          admin_label: 'Time 16:00'
+          admin_label: 'Time 14:30'
           plugin_id: text_custom
           empty: false
-          content: "<div class=\"flex items-center my-4 lg:my-0\">\r\n    <div class=\"w-16 text-lg font-bold text-fs-violet-500\">16:00</div>\r\n    <div class=\"flex-1 border border-fs-cyan-200 max-lg:hidden\"></div>\r\n</div>"
+          content: "<div class=\"flex items-center my-4 lg:my-0\">\r\n    <div class=\"w-16 text-lg font-bold text-fs-violet-500\">14:30</div>\r\n    <div class=\"flex-1 border border-fs-cyan-200 max-lg:hidden\"></div>\r\n</div>"
           tokenize: false
       display_extenders: {  }
       displays:
@@ -1298,6 +1276,28 @@ display:
         footer: false
       display_description: ''
       header:
+        area_text_custom_2:
+          id: area_text_custom_2
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: 'Time 16:00'
+          plugin_id: text_custom
+          empty: false
+          content: "<div class=\"flex items-center my-4 lg:my-0\">\r\n    <div class=\"w-16 text-lg font-bold text-fs-violet-500\">16:00</div>\r\n    <div class=\"flex-1 border border-fs-cyan-200 max-lg:hidden\"></div>\r\n</div>"
+          tokenize: false
+        area_text_custom_1:
+          id: area_text_custom_1
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: 'Coffee break (river room)'
+          plugin_id: text_custom
+          empty: false
+          content: '<div class="p-4 font-bold bg-fs-cyan-200 md:col-span-5 lg:ml-20">Coffee break (River room)</div>'
+          tokenize: false
         area_text_custom:
           id: area_text_custom
           table: views
