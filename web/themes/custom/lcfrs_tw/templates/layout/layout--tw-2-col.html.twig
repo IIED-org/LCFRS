@@ -1,0 +1,23 @@
+{% if content %}
+  <div{{ attributes }}>
+         <div class="container px-4 mx-auto lg:grid lg:gap-12 xl:gap-24 lg:grid-cols-5">
+      {% if content.first %}
+        <div {{ region_attributes.first.addClass('layout__region', 'layout__region--first', 'lg:col-span-3') }}>
+          {{ content.insert_before }}
+          {{ content.controls }}
+          {{ content.first }}
+          {{ content.insert_after }}
+        </div>
+      {% endif %}
+
+      {% if content.second %}
+        <div {{ region_attributes.second.addClass('layout__region', 'layout__region--second', 'lg:col-span-2') }}>
+          {{ content.insert_before }}
+          {{ content.controls }}
+          {{ content.second }}
+          {{ content.insert_after }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}
