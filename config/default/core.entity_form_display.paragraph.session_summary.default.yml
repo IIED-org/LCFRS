@@ -1,0 +1,30 @@
+uuid: a01d59bb-84ed-4cb7-bdc8-0bc194ad4542
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.session_summary.field_session
+    - paragraphs.paragraphs_type.session_summary
+  module:
+    - tagify
+id: paragraph.session_summary.default
+targetEntityType: paragraph
+bundle: session_summary
+mode: default
+content:
+  field_session:
+    type: tagify_entity_reference_autocomplete_widget
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      placeholder: ''
+      suggestions_dropdown: 1
+      show_entity_id: 0
+      show_info_label: 0
+      info_label: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
