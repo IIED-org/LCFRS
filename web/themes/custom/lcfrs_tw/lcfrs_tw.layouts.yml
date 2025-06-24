@@ -1,0 +1,10 @@
+tw-2-col:
+  label: "LCRFS two column standard"
+  category: "LCRFS layouts"
+  template: templates/layout/layout--tw-2-col
+  default_region: main
+  regions:
+    first:
+      label: Main
+    second:
+      label: Side bar

@@ -1,0 +1,13 @@
+uuid: 82c00460-213a-4a9f-96e8-cb19fa784e22
+langcode: en
+status: true
+dependencies: {  }
+id: light_background
+label: 'Light background'
+classes: bg-light
+type: component
+group: default
+block_restrictions:
+  - 'inline_block:content_paragraphs_block'
+layout_restrictions: {  }
+weight: 0

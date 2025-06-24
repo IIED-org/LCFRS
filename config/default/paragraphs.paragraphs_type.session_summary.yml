@@ -1,0 +1,10 @@
+uuid: b30b056e-5426-4c61-bc09-bef868145380
+langcode: en
+status: true
+dependencies: {  }
+id: session_summary
+label: 'Session summary'
+icon_uuid: null
+icon_default: null
+description: 'Adds formatted session information'
+behavior_plugins: {  }

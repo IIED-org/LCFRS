@@ -56,6 +56,7 @@ third_party_settings:
     entity_view_mode_restriction:
       allowed_layouts:
         - layout_onecol
+        - tw-2-col
       denylisted_blocks: {  }
       allowlisted_blocks: {  }
       restricted_categories:

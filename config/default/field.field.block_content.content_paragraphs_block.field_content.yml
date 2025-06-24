@@ -8,6 +8,7 @@ dependencies:
     - paragraphs.paragraphs_type.accordion
     - paragraphs.paragraphs_type.embed
     - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.session_summary
     - paragraphs.paragraphs_type.text
     - paragraphs.paragraphs_type.video
   module:
@@ -30,6 +31,7 @@ settings:
       embed: embed
       image: image
       text: text
+      session_summary: session_summary
       video: video
     negate: 0
     target_bundles_drag_drop:
@@ -41,6 +43,9 @@ settings:
         enabled: true
       image:
         weight: 8
+        enabled: true
+      session_summary:
+        weight: 10
         enabled: true
       text:
         weight: 9

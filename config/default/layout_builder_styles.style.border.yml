@@ -1,0 +1,13 @@
+uuid: facb1607-f596-4bde-bcff-63caadc1f003
+langcode: en
+status: true
+dependencies: {  }
+id: border
+label: Border
+classes: "mb-12\r\nboxed"
+type: component
+group: spacing
+block_restrictions:
+  - 'inline_block:content_paragraphs_block'
+layout_restrictions: {  }
+weight: 0

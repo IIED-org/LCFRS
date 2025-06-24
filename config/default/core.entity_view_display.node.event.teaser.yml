@@ -17,7 +17,6 @@ dependencies:
     - field.field.node.event.field_tags
     - node.type.event
   module:
-    - smart_date
     - user
 _core:
   default_config_hash: N8rJLgGAa_L-lMVhSb6lQp0iNdXSB7YkA4DztDzmD1I
@@ -31,39 +30,39 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
+  field_session_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
     weight: 2
     region: content
-  field_event__date:
-    type: smartdate_default
-    label: hidden
+  field_speakers:
+    type: entity_reference_label
+    label: above
     settings:
-      timezone_override: ''
-      format_type: medium
-      format: default
-      force_chronological: false
-      add_classes: false
-      time_wrapper: true
-      localize: false
-      parts:
-        - start
-        - end
-      duration:
-        separator: ' | '
-        unit: ''
-        decimals: 2
-        suffix: h
+      link: false
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 3
     region: content
 hidden:
   content_moderation_control: true
   field_content: true
   field_content_paragraphs: true
+  field_event__date: true
   field_notifications: true
   field_partners: true
   field_room: true
   field_session_id: true
-  field_session_type: true
-  field_speakers: true
-  field_tags: true
   links: true
