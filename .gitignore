@@ -77,4 +77,4 @@ node_modules
 /drush/*
 
 # Dev mode: don't include tailwind.css 
-styles.css
+tailwind.output.css
