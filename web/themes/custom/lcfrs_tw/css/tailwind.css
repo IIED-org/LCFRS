@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400&family=Noto+Serif:ital,wght@0,400;1,700&display=swap');
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+
+
+
+/* @font-face {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@400,700&display=swap') format('woff2'),
+  font-display: swap; 
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: italic;
+  font-weight: 700;
+  src: url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@400,700&display=swap') format('woff2'),
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Serif:ital,wght@400,700&display=swap') format('woff2'),
+  font-display: swap;
+} */
+
+
+@theme {
+    --font-display: "Noto Serif", serif; 
+    --font-body: "Noto Sans", sans-serif;
+    --color-fs-violet-100: oklch(0.94 0.0164 313.61);
+    --color-fs-violet-400: oklch(0.67 0.1106 311.09);
+    --color-fs-violet-500: oklch(0.58 0.1107 310.99);
+    --color-fs-violet-600: oklch(0.53 0.111 311.26);
+    --color-fs-violet-800: oklch(0.45 0.117 310.6);
+    --color-fs-red-300: oklch(0.7466 0.122 29.53);
+    --color-fs-red-500: oklch(0.69 0.1546 30.52);
+    --color-fs-red-800: oklch(0.63 0.1888 29.48);
+    --color-fs-red-sat: oklch(0.62 0.2168 31.61);
+    --color-fs-green-500: oklch(0.68 0.1426 165.12); 
+    --color-fs-green-300: oklch(0.72 0.1425 165.04);
+    --color-fs-green-200: oklch(0.83 0.0924 174.51);
+    --color-fs-green-100: oklch(0.96 0.02 177.46);
+    --color-fs-cyan-500: oklch(0.72 0.1203 199.67);
+    --color-fs-cyan-300: oklch(0.76 0.1203 199.67);
+    --color-fs-cyan-200: oklch(0.85 0.081 199.67);
+    --color-fs-cyan-100: oklch(0.97 0.0073 312.3);
+}
+
+@layer base {
+  :root {
+    --font-display: 'Noto Serif', serif;
+    --font-body: 'Noto Sans', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body); 
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+
+  p, span, a, li, ol, strong, em, b, i {
+    font-family: var(--font-body);
+  }
+}
+
+@layer components {
+    .typography {
+      color: var(--color-gray-950);
+    }
+
+    .prose {
+        font-family: var(--font-body);
+    }
+
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4,
+  .prose h5,
+  .prose h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+
+  .prose {
+    font-family: var(--font-body);
+    max-width: 76ch;
+  }
+
+  .prose a {
+    color: var(--color-fs-violet-500);
+    &:hover {
+        color: var(--color-fs-violet-400);
+    }
+    &:visited {
+        color: var(--color-fs-violet-600);
+    }
+  }
+}
+
+  h2 .field--name-field-heading {
+    @apply text-3xl lg:text-4xl font-normal;
+}
+
+  hr {
+    @apply mt-8 mb-8 border-fs-cyan-500;
+  
+}
+
+.page-title, h1.page-title {
+    @apply font-display text-4xl lg:text-5xl xl:text-6xl tracking-tight text-fs-violet-500 font-bold;
+  }
+
+.media--type-remote-video iframe.media-oembed-content {
+    @apply aspect-video;
+}
+
+.views-view-responsive-grid__item-inner {
+    @apply h-full;
+}
+
+.menu--main .menu .menu-item--active-trail {
+  @apply border-fs-green-500 border-b-3;
+}
+
+.off-canvas-menu .menu-item--active-trail a {
+  @apply text-fs-violet-500;
+}
+
+.menu--main .menu  {
+    @apply flex items-end justify-center md:mr-auto md:ml-4 md:pl-4 whitespace-nowrap;
+  }
+
+.menu--main .menu-item {
+    @apply text-gray-900 font-semibold text-lg border-b-3 border-transparent h-full transition-colors duration-300 py-2 mx-4 xl:mx-6;
+
+    &:hover {
+        @apply border-fs-green-500
+    }
+    &:visited {
+        @apply text-gray-900;
+    }
+  }
+
+.off-canvas-menu .menu, .off-canvas-menu .menu-item {
+  @apply ml-0;
+}
+
+.off-canvas-menu .menu-item a {
+    @apply text-gray-900 font-semibold text-lg border-b-2 border-transparent h-full transition-colors duration-300 px-4 py-2 block mb-2;
+
+    &:hover {
+        @apply text-fs-violet-500;
+    }
+}
+
+.button {
+    @apply text-center p-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-fs-violet-500 transition duration-300 ease-in-out cursor-pointer;
+}
+
+.button.button--primary {
+    @apply text-center p-4 font-semibold text-white bg-fs-violet-500 border border-transparent hover:bg-fs-violet-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-fs-violet-500 transition duration-300 ease-in-out cursor-pointer;
+}
+
+.button--secondary {
+    @apply text-center p-4 font-semibold border border-fs-violet-500 hover:bg-fs-cyan-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-fs-violet-500 transition duration-300 ease-in-out cursor-pointer;
+}
+
+.button-secondary-cyan {
+    @apply text-center p-4 font-semibold border border-fs-violet-500 hover:bg-fs-green-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-fs-violet-500 transition duration-300 ease-in-out cursor-pointer;
+}
+
+.button-top {
+    @apply text-center p-2 text-black bg-fs-cyan-500 border border-transparent hover:bg-fs-cyan-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-fs-cyan-500 transition duration-300 ease-in-out cursor-pointer;
+}
+
+.bg-fs-cyan-green-100 {
+    @apply bg-linear-to-b from-fs-cyan-100 to-fs-green-100;
+}
+
+.bg-fs-cyan-green-200 {
+  @apply bg-linear-to-b from-fs-cyan-200 to-fs-green-200;
+}
+
+.bg-fs-violet-red-800 {
+  @apply bg-linear-to-br from-fs-violet-800 to-fs-red-800;
+}
+
+#block-lcfrs-tw-main-menu .button-register {
+    @apply border-0 text-center p-2 text-black bg-fs-cyan-300 hover:bg-fs-cyan-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-fs-cyan-500 transition duration-300 ease-in-out cursor-pointer mx-6 text-lg font-semibold lg:mr-0 lg:ml-4 xl:ml-6;
+}
+
+#block-lcfrs-tw-main-menu .button-live {
+    @apply text-center p-2 text-black bg-white border border-fs-violet-500 hover:bg-fs-cyan-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-fs-violet-500 transition duration-300 ease-in-out cursor-pointer mx-6 text-lg font-semibold lg:mr-0 lg:ml-4 xl:ml-6;
+}
+
+
+[x-cloak] { display: none !important; }
+
+/* sign up form */
+
+#clickd .clickdform input[type="text"], 
+.clickdimensions .clickdform input[type="text"] 
+{
+  @apply h-9 border border-neutral-300 px-4 py-2 min-w-sm sm:min-w-md;
+}
+#clickd #btnSubmit,
+.clickdimensions #btnSubmit
+ {
+  @apply px-4 py-3 border-none bg-fs-violet-500 cursor-pointer font-body font-semibold text-white transition-colors duration-150 hover:bg-fs-violet-600;
+}
+.clickdform.mainDiv {
+  height: 100% !important;
+}
+.clickdform.mainDiv .clickdform {
+  height: 100% !important;
+}
+
+#clickdimensionsForm .maxSize2 {
+  @apply text-base text-gray-500;
+}
+
+.clickdform .mainDiv {
+  padding-left: 0 !important;
+}
+
+.text-lg {
+  @apply font-body;
+}
+
+.view-events .view-content {
+  @apply lg:pl-20;
+}
+
+.wide-image img {
+  @apply w-full object-cover;
+}
+
+#user-login-form {
+  @apply container mx-auto px-4 py-12;
+}
+
+.field--name-field-accordion-item {
+  @apply flex-grow pr-4;
+}
+
+/* Custom for special session oon programme */
+.riverside {
+  @apply bg-fs-green-100 p-4 my-4 lg:-mx-4;
+}
+
+.riverside .session-card {
+  @apply bg-white;
+}
+
+.boxed h2 {
+  @apply !mt-0;
+}
+.boxed .field--name-field-content {
+  @apply border border-fs-cyan-500 p-4;
+}
+
+.bg-light .field--name-field-content {
+  @apply bg-fs-cyan-100;
+}
