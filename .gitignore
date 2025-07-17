@@ -49,7 +49,7 @@ launch-drupal-cms.sh
 
 # Ignore IDE files
 .idea/
-.vscode/
+# .vscode/
 *.code-workspace
 
 # Ignore xdebug log file genearted by lando
@@ -76,5 +76,5 @@ node_modules
 # Ignore drush aliases for now
 /drush/*
 
-# Dev mode: don't include tailwind.css 
-tailwind.css
+# Dev mode: don't include output styles.css 
+styles.css

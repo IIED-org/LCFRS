@@ -2,7 +2,7 @@ base:
   version: VERSION
   css:
     base:
-      css/tailwind.output.css: { weight: -10 }
+      css/styles.css: { weight: -10 }
       css/custom.css: { weight: 0 }
     component:
       css/components/action-links.css:

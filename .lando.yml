@@ -1,4 +1,4 @@
-name: iied-lcfrs
+name: lcrfs
 recipe: drupal11
 config:
   php: '8.3'
@@ -14,7 +14,7 @@ services:
     overrides:
       environment:
         DRUSH_OPTIONS_ROOT: '/app/web'
-        DRUSH_OPTIONS_URI: 'https://iied-lcfrs.lndo.site'
+        DRUSH_OPTIONS_URI: 'https://lcrfs.lndo.site'
         # Support debugging Drush with XDEBUG. Use lando drush to debug.
         PHP_IDE_CONFIG: "serverName=appserver"
         LANDO_HOST_IP: "host.docker.internal"
@@ -36,6 +36,8 @@ services:
   node:
     type: node:20
     scanner: false
+    build:
+      cmd: cd /app/web/themes/custom/lcfrs_tw && npm install && npm run dev
   mailhog:
     type: mailhog
     hogfrom:
@@ -43,9 +45,9 @@ services:
     portforward: true
 proxy:
   adminer:
-    - adminer.iied-lcfrs.lndo.site
+    - adminer.iied-lcrfs.lndo.site
   mailhog:
-    - mail.iied-lcfrs.lndo.site
+    - mail.iied-lcrfs.lndo.site
 tooling:
   composer:
     service: appserver
