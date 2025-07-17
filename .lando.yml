@@ -36,6 +36,8 @@ services:
   node:
     type: node:20
     scanner: false
+    build:
+      cmd: cd /app/web/themes/custom/lcfrs_tw && npm install && npm run dev
   mailhog:
     type: mailhog
     hogfrom:
@@ -55,10 +57,7 @@ tooling:
   yarn:
     service: node
   node:
-    service: node    
-    scanner: false
-    build:
-      cmd: cd /app/web/themes/custom/lcfrs_tw && npm install && npm run dev
+    service: node
   gulp:
     service: node
   xdebug-on:
