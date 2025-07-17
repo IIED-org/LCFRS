@@ -49,7 +49,7 @@ launch-drupal-cms.sh
 
 # Ignore IDE files
 .idea/
-.vscode/
+# .vscode/
 *.code-workspace
 
 # Ignore xdebug log file genearted by lando
