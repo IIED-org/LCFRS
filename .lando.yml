@@ -55,7 +55,10 @@ tooling:
   yarn:
     service: node
   node:
-    service: node
+    service: node    
+    scanner: false
+    build:
+      cmd: cd /app/web/themes/custom/lcfrs_tw && npm install && npm run dev
   gulp:
     service: node
   xdebug-on:
